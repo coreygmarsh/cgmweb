@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.horizontal-gallery {
+  /* Existing styles */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  overflow: scroll;
+}
+
+.horizontal-gallery::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+/* Add this CSS to your stylesheet */
+@keyframes sparkle {
+  0%, 100% { opacity: 1; text-shadow: 0 0 8px #00d4ff, 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 40px #00d4ff, 0 0 80px #00d4ff, 0 0 120px #00d4ff; }
+  /* 50% { opacity: 0.5; text-shadow: none; } */
+}
+@keyframes vision {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+.vision {
+  animation: sparkle 1s infinite ease-in-out;
+}
+
+/* Add this to your CSS file */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@font-face {
+    font-family: 'YourCustomFont';
+    src: url('../public/Cormorant-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+   @font-face {
+    font-family: 'YourCustomFont2';
+    src: url('../public/Cinzel-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'YourCustomFont3';
+    src: url('/public/GlacialIndifference-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  } 
+  @font-face {
+    font-family: 'YourCustomFont4';
+    src: url('/public/QarkinePersonalUse-ZVvn3.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'YourCustomFont5';
+    src: url('/public/CsJuicy-51XYa.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }  
+  @font-face {
+    font-family: 'YourCustomFont6';
+    src: url('/public/Breakwater.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }  
+/* styles.css */
+.horizontal-gallery {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+.gallery-item {
+  scroll-snap-align: start;
+  flex: none;
+  width: 100vw; /* Adjust based on your design */
+  height: 100vh;
+  position: sticky;
+  top: 0; /* Adjust if needed */
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Increase letter-spacing */
+.element {
+  letter-spacing: 2px;
+}
+
+/* Decrease letter-spacing */
+.element {
+  letter-spacing: -1px;
+}
+
+/* Reset letter-spacing to normal */
+.element {
+  letter-spacing: normal;
+}
