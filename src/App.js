@@ -5,7 +5,11 @@ import Library from './components/Library/Library';
 import Testimonials from './components/Testimonials/Testimonials';
 import Contact from './components/Contact/Contact';
 import Landing from './components/Landing/Landing';
-import AboutSection from "./components/About/AboutSection"
+import Services from './components/Services';
+import { BentoGrid, TypewriterEffect } from './components/utils/BentoGrid';
+import Slider from './components/Carousel';
+import Carousel from './components/Carousel';
+import AboutPage from './components/About/AboutPage';
 
 const App = () => {
   return (
@@ -13,9 +17,9 @@ const App = () => {
         <Routes>
           <Route path="/">
             <Route index element={<Landing/>} />
-          <Route path="/about" element={<AboutSection/>} />
+          <Route path="/about" element={<AboutPage/>} />
           <Route path="/library" element={<Library />} />
-          <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/testimonials" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
 
           </Route>

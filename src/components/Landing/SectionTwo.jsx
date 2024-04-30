@@ -4,6 +4,7 @@ import { Underwater, watertexture } from '../../images/ImgAssets';
 import About from "../About/About"
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { SectionDeuce } from './SectionDuece';
 
 const SectionTwo = () => {
     const controls = useAnimation();
@@ -21,7 +22,7 @@ const SectionTwo = () => {
         hidden: { opacity: 0, scale: 0.75 },
       };    
   return (
-    <div className="flex items-center justify-center   h-screen bg-gradient-to-b from-cyan-700 via-cyan-300 to-white" 
+    <div className="flex items-center justify-center mx-24 shadow-sparkle h-screen bg-gradient-to-l from-cyan-900 to-slate-800" 
     style={{
         backgroundImage: `url${watertexture}`,
         // Or, if you prefer the other texture:
@@ -33,7 +34,8 @@ const SectionTwo = () => {
         <img src={Underwater} alt="Brand" className="mx-auto rounded-full w-48 h-48 object-cover" />
         <p className="mt-5 text-xl">Your message or testimonial here.</p>
       </div> */}
-      <About/>
+      {/* <About/> */}
+      <SectionDeuce/>
     </div>
   );
 };

@@ -1,54 +1,93 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "../../index.css"
 import Navbar from '../Navbar/Navbar';
-import { WaveDrawing } from '../../images/ImgAssets';
+import ContactLayout from "../../images/ContactLayout.png"
 
 const Contact = () => {
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(formData); // For now, we'll just log the form data to the console.
+    // Here you would typically send the form data to a server or email service.
+    setFormData({
+      name: '',
+      email: '',
+      message: '',
+    });
+  };
+
   return (
-    <div className="relative">
-      <div className="absolute top-0 left-0 right-0 h-screen bg-cover bg-blend-screen bg-gradient-to-b from-cyan-700 to-white"
-        // Uncomment the next line and ensure WaterRoad is correctly imported to use as background
-        // style={{ backgroundImage: `url(${WaterRoad})` }}
-      >
-        <Navbar/>
-        <div className='text-center pt-4 text-green-300 font-customtwo text-8xl vision'>CONTACT</div>
-        <div className="max-w-4xl mx-auto p-12 pt-24 font-customtwo py-16">
-          <div className="grid md:grid-cols-2 gap-8 px-4">
-            <div>
-              
-              <h2 className="text-4xl font-bold mb-4 text-green-300">GET IN TOUCH</h2>
-              <p><strong>EMAIL:</strong> COREYMARSHPM@GMAIL.COM</p>
-              
-              {/* Social Media Links */}
-              <div className="mt-4">
-                <h3 className="text-2xl font-semibold text-green-300">FOLLOW US</h3>
-                {/* Example social media links */}
-                <p>INSTAGRAM, FACEBOOK, LINKEDIN, AND MORE!</p>
-              </div>
-            </div>
-            <div>
-              <h2 className="text-3xl font-bold mb-4 text-green-300">SEND ME A MESSAGE</h2><img src={WaveDrawing}/>
-              <form>
-                <div className="mb-4">
-                  {/* <label className="block text-sm font-medium mb-1 " htmlFor="name">Name</label> */}
-                  <input type="text" id="name" placeholder=" Name " className="w-full border-gray-300 shadow-sm"/>
-                </div>
-                <div className="mb-4">
-                  {/* <label className="block text-sm font-medium mb-1 " htmlFor="email">Email</label> */}
-                  <input type="email" id="email" placeholder=" Email " className="w-full border-gray-300 shadow-lg"/>
-                </div>
-                <div className="mb-4">
-                  {/* <label className="block text-sm font-medium mb-1  text-green-300" htmlFor="message">Message</label> */}
-                  <textarea id="message" rows="4" placeholder=" Message " className="w-full border-gray-300 shadow-sm"></textarea>
-                </div>
-                <button type="submit" className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">SEND</button>
-              </form>
-            </div>
+    <div className="relative h-screen overflow-hidden ">
+      <div className="absolute top-0 h-screen w-full left-0 right-0 bg-no-repeat bg-cover bg-center opacity-95" 
+          style={{ backgroundImage: `url(${ContactLayout})` }} >
+      </div>
+
+      <Navbar className="absolute top-0 left-0 right-0 z-70"/>
+
+      {/* Contact Form */}
+      <div className="absolute font-customnine top-1/2 right-0 shadow-sparkle transform -translate-x-1/2 -translate-y-1/2 z-70 w-full max-w-md p-8 bg-gradient-to-br from-cyan-800 bg-opacity-90 rounded-lg ">
+        <h2 className="text-4xl font-bold text-green-300 text-center mb-4">Contact Me</h2>
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div>
+            <label htmlFor="name" className="block text-sm font-medium text-black">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder='Name'
+              value={formData.name}
+              onChange={handleChange}
+              className="mt-1 pl-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+            />
           </div>
-        </div>
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium text-black">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder='Email'
+              value={formData.email}
+              onChange={handleChange}
+              className="mt-1 pl-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+            />
+          </div>
+          <div>
+            <label htmlFor="message" className="block text-sm font-medium text-black">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              value={formData.message}
+              placeholder='Message'
+              onChange={handleChange}
+              className="mt-1 pl-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+            />
+          </div>
+          <div>
+            <button type="submit" className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+              Send
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   );
 }
 
 export default Contact;
+

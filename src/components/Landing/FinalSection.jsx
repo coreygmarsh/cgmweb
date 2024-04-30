@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { WavesThree } from '../../images/ImgAssets';
+import { CGMBizCard, WavesThree } from '../../images/ImgAssets';
 import Contact from '../Contact/Contact';
 import { useNavigate } from 'react-router-dom';
 import "../../index.css"
@@ -25,22 +25,20 @@ const FinalSection = () => {
     navigate('/contact'); // Adjust this path as needed
   };
   return (
-    <motion.div
+    <div
       ref={ref}
-      animate={controls}
-      initial="hidden"
-      variants={variants}
-      className="relative flex items-center justify-center h-screen overflow-hidden bg-black"
+      className="relative flex items-center mx-24 shadow-sparkle justify-center h-screen overflow-hidden"
     >
       <video autoPlay loop muted className="absolute z-0 w-auto min-w-full h-screen max-w-none" style={{ objectFit: 'cover', height: '100%', width: '100%' }}>
         <source src={WavesThree} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
+      {/* <img src={CGMBizCard} className='h-60 w-60'/> */}
       <button onClick= {handleNavigate}
-      className="z-10 text-white text-8xl font-customtwo border shadow-2xl shadow-white rounded-full p-8 hover:bg-cyan-900 vision">CONTACT ME </button>
+      className="z-10 text-white md:mx-24 text-8xl font-customnine tracking-wide border shadow-2xl shadow-white rounded-full p-8 hover:bg-cyan-900 vision">CONTACT ME </button>
       {/* Or if you want to include the Contact component instead of the text */}
       {/* <div className="z-10"><Contact /></div> */}
-    </motion.div>
+    </div>
   );
 };
 
