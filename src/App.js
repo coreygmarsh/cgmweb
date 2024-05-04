@@ -10,7 +10,7 @@ import { BentoGrid, TypewriterEffect } from './components/utils/BentoGrid';
 import Slider from './components/Carousel';
 import Carousel from './components/Carousel';
 import AboutPage from './components/About/AboutPage';
-
+import PricingTable from "./components/PricingTable"
 const App = () => {
   return (
     <BrowserRouter>
@@ -19,7 +19,7 @@ const App = () => {
             <Route index element={<Landing/>} />
           <Route path="/about" element={<AboutPage/>} />
           <Route path="/library" element={<Library />} />
-          <Route path="/testimonials" element={<Services />} />
+          <Route path="/testimonials" element={<Services/>} />
           <Route path="/contact" element={<Contact />} />
 
           </Route>

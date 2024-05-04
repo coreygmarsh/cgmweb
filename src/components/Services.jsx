@@ -1,11 +1,12 @@
 import React from 'react'
 import { BentoGrid } from './utils/BentoGrid'
 import Navbar from './Navbar/Navbar'
+import PricingTable from './PricingTable'
 
 const Services = () => {
   return (
     <div>
-      <div className='bg-gradient-to-b from-cyan-800 via-teal-700 to-slate-800 h-screen font-customeight tracking-wide text-center pt-12
+      <div className='bg-gradient-to-b from-cyan-800 via-teal-700 to-slate-800 h-screen font-customnine tracking-wide text-center pt-12
     text-white text-4xl' >
         <h1 className='text-9xl tracking-widest text-green-300 vision'>
             SERVICES
@@ -19,7 +20,10 @@ const Services = () => {
             <p>Web Development</p>
             <p></p>
         </ul> */}
-        <BentoGrid/>
+        {/* <BentoGrid/> */}
+        <div className='pt-16'>
+        <PricingTable/>
+        </div>
       </div>
     </div>
   )
