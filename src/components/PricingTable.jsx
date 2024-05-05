@@ -11,7 +11,7 @@ const plans = [
     buttonText: 'Get Basic',
     buttonLink: '#basic',
     info: 'This plan is perfect for individuals looking to handle single projects without the need for extensive revisions.',
-    workload: '9 hour workload ~ equivalent to:',
+    workload: '9 hours ~ equivalent to:',
     videos: ['1 x Product Video', '1 x Testimonial Video', '1 x Explainer Video']
   },
   {
@@ -23,7 +23,7 @@ const plans = [
     buttonLink: '#professional',
     bestDeal: true,
     info: 'This package is tailored for small teams needing higher resolution edits and more revisions.',
-    workload: '15 hour workload ~ equivalent to:',
+    workload: '15 hours ~ equivalent to:',
     videos: ['1 x Founders Video', '1 x Product Video', '1 x Explainer Video', '1 x Event video', '1 x Training Video']
   },
   {
@@ -34,15 +34,15 @@ const plans = [
     buttonText: 'Get Enterprise',
     buttonLink: '#enterprise',
     info: 'Designed for large organizations, offering extensive services including unlimited revisions and high-resolution edits.',
-    workload: '30 hour workload ~ equivalent to:',
-    videos: ['1 x Founders Video', '1 x Product Video', '1 x Explainer Video', '4 x Event Videos', '1 x Recruitment Video']
+    workload: '30 hours ~ equivalent to:',
+    videos: ['1 x Testimonial Video','1 x Founders Video', '1 x Trainer Video','1 x Product Video', '1 x Explainer Video', '4 x Event Videos', '1 x Recruitment Video']
   }
 ];
 
 const Modal = ({ content, onClose }) => (
-  <div className="fixed inset-0 z-[90] px-48 bg-gray-600 bg-opacity-50 flex justify-center items-center">
+  <div className="fixed inset-0 z-[90] px-96 bg-gray-600 bg-opacity-50 flex justify-center items-center">
     <div className="bg-gradient-to-br from-black via-cyan-700 to-slate-800 p-5  rounded-lg shadow-lg">
-      <h3 className="text-4xl italic font-bold">{content.name} Plan Details</h3>
+      <h3 className="text-4xl text-teal-300  font-bold">{content.name} Plan Details</h3>
       <p className="mt-2 text-xl mx-24">{content.info}</p>
       <p className="font-semibold text-lg underline my-4 text-green-300">{content.workload}</p>
       <ul className=" text-lg pl-5">
@@ -59,7 +59,7 @@ const PricingPlan = ({ plan }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <div className={`p-2 rounded-lg max-w-sm pt-6 bg-gradient-to-br from-black via-slate-700 to-slate-800 h-[34rem] ${plan.bestDeal ? 'bg-cyan-500 text-white' : 'bg-gradient-to-br from-cyan-900 via-cyan-800 to-slate-800'}`}>
+    <div className={`p-2 rounded-lg max-w-sm pt-6 bg-gradient-to-br from-black via-cyan-700 to-slate-900 h-[34rem] ${plan.bestDeal ? 'bg-cyan-500 text-white' : 'bg-gradient-to-br from-cyan-900 via-cyan-800 to-slate-800'}`}>
       <h2 className="text-2xl text-center font-bold underline mb-2">{plan.name}</h2>
       <div className="flex justify-center items-center px-6">
         <p className="text-6xl ">{plan.price}</p>
