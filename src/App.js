@@ -11,15 +11,24 @@ import Slider from './components/Carousel';
 import Carousel from './components/Carousel';
 import AboutPage from './components/About/AboutPage';
 import PricingTable from "./components/PricingTable"
+import Professional from './Packages/Professional';
+import Basic from './Packages/Basic';
+import Enterprise from "./Packages/Enterprise"
+import ParallaxGallery from './components/Library/ParallaxGallery';
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter className="">
         <Routes>
           <Route path="/">
             <Route index element={<Landing/>} />
           <Route path="/about" element={<AboutPage/>} />
           <Route path="/library" element={<Library />} />
+
           <Route path="/testimonials" element={<Services/>} />
+            <Route path="/basic" element={<Basic/>} />
+            <Route path="/professional" element={<Professional/>} />
+            <Route path="/enterprise" element={<Enterprise/>} />
+
           <Route path="/contact" element={<Contact />} />
 
           </Route>

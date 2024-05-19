@@ -8,15 +8,15 @@ import { PortraitMainOne } from "../../images/ImgAssets";
 export const SectionDeuce = () => {
   return ( 
       <div
-      className="h-[100vh] py-40 overflow-hidden bg-center bg-cover w-full relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h:[30vh] xl:h-[100vh]  py-40 overflow-hidden bg-center bg-cover w-full relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
       style={{ backgroundImage: `url(${watertexture})` }}
       >
         <div 
         className=' rounded-lg z-50 justify-center flex '>
-        <img src={Avatar} alt="Corey Marsh" className='shadow-sparkle rounded-md  xl:w-[700px] xl:h-[475px] md:w-[400px] md:[275px] object-cover' />
+        <img src={Avatar} alt="Corey Marsh" className='shadow-sparkle rounded-md  xl:w-[700px] md:w-[400px] sm:w-[275px] w-[300px] xl:h-[475px] lg:[300px] md:[300px] object-cover' />
       </div>
-      <div className=" z-50">
-      <p className="text-[8rem] text-white font-customnine tracking-widest  uppercase z-50 text-center ">Corey G. Marsh</p>
+      <div className="flex flex-col items-center z-50">
+      <p className="text-[2rem] xl:text-[6rem] lg:text-[5rem] md:text-[4rem] sm:text-[3rem] md: text-white font-customnine tracking-widest  uppercase z-50 text-center ">Corey G. Marsh</p>
       {/* <p className="text-4xl z-50 text-white font-customnine text-center pt-4 mb-24">Graphic Designer </p>        */}
         </div>
 

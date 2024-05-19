@@ -51,14 +51,14 @@ const ImageGrid = () => {
   ];
 
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-4  w-full h-full z-[70] gap-2">
+    <div className="grid grid-cols-2 sm:grid-cols-4  w-full h-full rounded-full z-[70] gap-2">
       {imageGroups.map((group, index) => (
         <div key={index} className="space-y-2 ">
           {group.map((image, imgIndex) => (
             <div key={imgIndex} className="relative">
               <img className="w-full h-auto object-cover" src={image.src} alt={image.name} />
-              <div className="absolute inset-0 z-40  bg-green-800 bg-opacity-80 hover:opacity-100 opacity-0 flex justify-center items-center transition-opacity duration-300">
-                <div className="text-white text-center hover:cursor-pointer hover:text-cyan-400 font-customnine text-7xl">
+              <div className="absolute inset-0 z-40  bg-cyan-950 bg-opacity-80  hover:opacity-80 opacity-0 flex justify-center items-center transition-opacity duration-300">
+                <div className="text-white text-center hover:cursor-pointer hover:text-cyan-400 font-customnine text-3xl">
                   <p className="font-bold">{image.name}</p>
                   <p>{image.description}</p>
                 </div>

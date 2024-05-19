@@ -1,27 +1,23 @@
-import React, {useState,useEffect} from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import Navbar from "../Navbar/Navbar"
+import Navbar from "../Navbar/Navbar";
 import ImageGrid from '../Library/ImageGrid';
-import "../../index.css"
-import  LayoutGrid from '../Library/LayoutGrid.jsx';
-
-// const carouselImages = [TwentyFive, Tension, Landscape, Botanical, Aaron, GuitarOne, AA3, Danita, PortraitThree, PortraitOne];
-
+import "../../index.css";
 
 const Library = () => {
   // Define your animation variants
   const pageVariants = {
     initial: {
-      rotateY: 180,
       opacity: 0,
+      x: '-100vw',
     },
     in: {
-      rotateY: 0,
       opacity: 1,
+      x: 0,
     },
     out: {
-      rotateY: -180,
       opacity: 0,
+      x: '100vw',
     },
   };
 
@@ -38,16 +34,14 @@ const Library = () => {
       exit="out"
       variants={pageVariants}
       transition={pageTransition}
-      className="bg-gradient-to-b from-cyan-800 to-slate-800 via-teal-700 bg-opacity-10  h-[2000px]"
-      // style={{ backgroundImage: `url(${Eser})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+      className="bg-gradient-to-b from-cyan-800 to-slate-800 via-teal-700 bg-opacity-10 min-h-screen"
     >
       <Navbar />
-      <h1 className='text-center pt-12 text-green-300 text-[10rem] vision font-customeight tracking-widest'>
+      <h1 className='text-center pt-12 text-green-300 text-5xl md:text-7xl lg:text-9xl font-customeight tracking-widest'>
         LIBRARY
       </h1>
-      <div className="flex justify-center items-center text-center z-50 flex-wrap mx-24 h-screen mt-12 shadow-sparkle">
+      <div className="flex justify-center items-center text-center z-50 flex-wrap mx-4 md:mx-12 lg:mx-24 mt-12">
         <ImageGrid />
-      {/* <LayoutGrid/> */}
       </div>
     </motion.div>
   );

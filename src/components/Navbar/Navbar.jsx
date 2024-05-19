@@ -1,26 +1,26 @@
 import React, { useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import {motion} from "framer-motion"
+import { motion } from 'framer-motion';
 
 const Navbar = () => {
-  
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const zIndexClass = isSidebarOpen ? 'z-[80]' : 'z-[50]';
-  // This function toggles the sidebar state between open and closed
+
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 
   const sidebarVariants = {
     opened: {
-      clipPath: `circle(150% at 40px 40px)`, // Adjust the circle size and position according to your layout
+      clipPath: `circle(150% at 40px 40px)`,
       opacity: 1,
     },
     closed: {
-      clipPath: "circle(0px at 40px 40px)",
+      clipPath: 'circle(0px at 40px 40px)',
       opacity: 0,
     },
   };
+
   return (
-    <div className={`absolute inset-0 ${zIndexClass} flex antialiased font-customtwo`} >
+    <div className={`absolute inset-0 ${zIndexClass} flex antialiased font-customtwo`}>
       {/* Fullscreen Modal */}
       <motion.div
         className="fixed inset-0 z-0 flex justify-center items-start transition-opacity duration-300 bg-black bg-opacity-90"
@@ -29,43 +29,79 @@ const Navbar = () => {
         initial={false}
         transition={{ duration: 0.5 }}
       >
-        {/* Sidebar content */}
         <div className="relative flex flex-col flex-1 max-w-screen mx-auto z-50">
-          {/* Close button and navigation links */}
+          {/* Sidebar content */}
         </div>
       </motion.div>
+
       <div
         className={`fixed inset-0 z-50 flex justify-center items-start bg-gradient-to-r from-cyan-800 via-teal-700 to-slate-800 transition-opacity duration-300 ${
           isSidebarOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
-        } bg-black bg-opacity-80`}
+        }`}
       >
         <div className="relative flex flex-col flex-1 text-white max-w-screen mx-auto z-50">
-          {/* Close button inside the modal */}
-          <div className=' text-white'>
-          <button onClick={toggleSidebar} className="p-2 rounded-full hover:shadow-sparkle focus:outline-none focus:ring absolute top-5 right-5">
+          <button
+            onClick={toggleSidebar}
+            className="p-2 rounded-full hover:shadow-sparkle focus:outline-none focus:ring absolute top-5 right-5"
+            aria-label="Close sidebar"
+          >
             <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
-          </div>
 
           <div className="flex items-center justify-center flex-shrink-0 p-4 mt-4">
             <a href="#" className="text-white">
-              {/* <img className="h-20 w-20" src={MyLogoone} alt="Logo"/> */}
+              {/* <img className="h-20 w-20" src={MyLogoone} alt="Logo" /> */}
             </a>
           </div>
+
           <nav className="flex flex-col font-customnine tracking-widest z-[70] pt-14 items-center p-12">
-  <Link to="/" className="lg:py-2 py-4 lg:text-9xl text-8xl hover:text-green-300 nav-link" onClick={() => setIsSidebarOpen(false)}>HOME</Link>
-  <Link to="/about" className="lg:py-2 py-4 lg:text-9xl text-8xl hover:text-green-300 nav-link" onClick={() => setIsSidebarOpen(false)}>ABOUT</Link>
-  <Link to="/testimonials" className="lg:py-2 py-4 lg:text-9xl text-8xl hover:text-green-300 nav-link" onClick={() => setIsSidebarOpen(false)}>SERVICES</Link>
-  <Link to="/library" className="lg:py-2 py-4 lg:text-9xl text-8xl hover:text-green-300 nav-link" onClick={() => setIsSidebarOpen(false)}>LIBRARY</Link>
-  <Link to="/contact" className="lg:py-2 py-4 lg:text-9xl text-8xl hover:text-green-300 nav-link" onClick={() => setIsSidebarOpen(false)}>CONTACT</Link>
-</nav>
+            <Link
+              to="/"
+              className="py-2 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl hover:text-green-300 nav-link"
+              onClick={() => setIsSidebarOpen(false)}
+            >
+              HOME
+            </Link>
+            <Link
+              to="/about"
+              className="py-2 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl hover:text-green-300 nav-link"
+              onClick={() => setIsSidebarOpen(false)}
+            >
+              ABOUT
+            </Link>
+            <Link
+              to="/testimonials"
+              className="py-2 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl hover:text-green-300 nav-link"
+              onClick={() => setIsSidebarOpen(false)}
+            >
+              SERVICES
+            </Link>
+            <Link
+              to="/library"
+              className="py-2 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl hover:text-green-300 nav-link"
+              onClick={() => setIsSidebarOpen(false)}
+            >
+              LIBRARY
+            </Link>
+            <Link
+              to="/contact"
+              className="py-2 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl hover:text-green-300 nav-link"
+              onClick={() => setIsSidebarOpen(false)}
+            >
+              CONTACT
+            </Link>
+          </nav>
         </div>
       </div>
+
       <main className="flex flex-col items-center justify-center flex-1 relative z-10">
-        {/* Toggle button */}
-        <button onClick={toggleSidebar} className={`fixed p-2 bg-transparent rounded-full hover:shadow-sparkle top-5 left-5 z-50 ${isSidebarOpen ? 'hidden' : ''}`}>
+        <button
+          onClick={toggleSidebar}
+          className={`fixed p-2 bg-transparent rounded-full hover:shadow-sparkle top-5 left-5 z-50 ${isSidebarOpen ? 'hidden' : ''}`}
+          aria-label="Open sidebar"
+        >
           <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-16 6h16" />
           </svg>
@@ -74,6 +110,6 @@ const Navbar = () => {
       </main>
     </div>
   );
-}
+};
 
 export default Navbar;

@@ -27,7 +27,7 @@ const FinalSection = () => {
   return (
     <div
       ref={ref}
-      className="relative flex items-center mx-24 shadow-sparkle justify-center h-screen overflow-hidden"
+      className="relative flex items-center  mx-6 xl:mx-24 lg:mx-24 md:mx-12 sm:mx-6  shadow-sparkle justify-center h-screen overflow-hidden"
     >
       <video autoPlay loop muted className="absolute z-0 w-auto min-w-full h-screen max-w-none" style={{ objectFit: 'cover', height: '100%', width: '100%' }}>
         <source src={WavesThree} type="video/mp4" />
@@ -35,7 +35,7 @@ const FinalSection = () => {
       </video>
       {/* <img src={CGMBizCard} className='h-60 w-60'/> */}
       <button onClick= {handleNavigate}
-      className="z-10 text-white md:mx-24 text-8xl font-customnine tracking-wide border shadow-2xl shadow-white rounded-full p-8 hover:bg-cyan-900 vision">CONTACT ME </button>
+      className="z-10 text-white md:mx-24 text-2xl xl:text-6xl lg:text-5xl md:text-5xl sm:text-3xl font-customnine tracking-wide border shadow-2xl shadow-white rounded-full p-8 hover:bg-cyan-900 vision">CONTACT ME </button>
       {/* Or if you want to include the Contact component instead of the text */}
       {/* <div className="z-10"><Contact /></div> */}
     </div>

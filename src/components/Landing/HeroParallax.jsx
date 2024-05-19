@@ -42,7 +42,7 @@ export const HeroParallax = ({ products }) => {
     springConfig
   );
   return (
-    <div className="px-24 bg-gradient-to-b from-cyan-800 via-teal-700 to-slate-800">
+    <div className="px-6 xl:px-24 lg:px-24 md:px-12 sm:px-6  bg-gradient-to-b from-cyan-800 via-teal-700 to-slate-800">
        
     <div className=" border-cyan-200 shadow-sparkle">    
     <div
@@ -114,13 +114,14 @@ export const Header = () => {
   return (
     <div className="max-w-screen text-center relative py-20 md:py-40 rounded-lg bg-transparent px-4 w-full left-0 top-0">
       <motion.h1 
-      className="text-xl w-full xl:text-[8rem] lg:text-[7rem] md:text-[2rem] font-customnine uppercase font-bold  dark:text-white "
+      className="text-4xl w-full xl:text-[5rem] lg:text-[5rem] md:text-[5rem] sm:text-[4rem] font-customnine font-bold  dark:text-white "
        variants={textRevealVariants}
        initial="hidden"
         animate="visible"
        >
-       <p className=" leading-tight text-white vision ">
-                    Welcome <span className="inline-block ml-1 text-white ">to a World Underwater</span>
+       <p className=" leading-tight text-white  ">
+                   <span className=" ml-1 text-white font-bold vision ">CGM Creative Solutions</span>
+                   <div className=" pt-4 text-5xl ml-1  text-white ">Imagine <span className="text-5xl italic">BIGGER.</span></div>
                 </p>
       </motion.h1>
       <p></p>
@@ -137,7 +138,7 @@ export const ProductCard = ({ product, translate }) => {
       whileHover={{
         y: -20,
       }}
-      className="group h-72 w-[30rem] relative flex-shrink-0"
+      className="group h-32 xl:h-72 lg:h-60 md:h-36 sm:h-32 w-[12rem] xl:w-[30rem] lg:w-[20rem] md:w-[12rem] sm:w-[10rem] relative flex-shrink-0"
     >
       <Link to={product.link} className="block hover:shadow-2xl">
         <img

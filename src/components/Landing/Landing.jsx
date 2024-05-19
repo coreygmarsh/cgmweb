@@ -24,8 +24,7 @@ const Landing = () => {
   
   ];
     return (
-      <div className="bg-gradient-to-b from-cyan-800 to-slate-800 bg-opacity-50">
-         
+      <div className="bg-gradient-to-b from-cyan-800 to-slate-800 bg-opacity-50 h-[5000px]">
         <div className="w-full z-20">
         <Navbar />
        
