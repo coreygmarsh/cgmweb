@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import Enterprise from "../Packages/Enterprise";
 import Professional from "../Packages/Professional";
 import Basic from "../Packages/Basic";
+
 const plans = [
   {
     name: 'Basic',
@@ -42,54 +43,59 @@ const plans = [
   }
 ];
 
-const Modal = ({ content, onClose }) => (
-  <div className="fixed inset-0 z-[80] px-96 bg-gray-600 bg-opacity-50 flex justify-center items-center">
-    <div className="bg-gradient-to-br from-black via-cyan-700 to-slate-800 p-5 w-96 rounded-lg shadow-lg">
-      <h3 className="text-2xl text-teal-300 font-bold">{content.name} Plan Details</h3>
-      <p className="mt-2 text-xs mx-2">{content.info}</p>
-      <p className="font-semibold text-lg underline my-4 text-green-300">{content.workload}</p>
-      <ul className=" text-lg pl-5">
-        {content.videos.map(video => (
-          <li key={video}>{video}</li>
-        ))}
-      </ul>
-      <button onClick={onClose} className="mt-6 bg-teal-900 text-white py-2 px-4 rounded text-lg hover:bg-teal-700">Close</button>
+const PricingPlan = ({ plan, isDropdownOpen, onToggle }) => (
+  <div className={`z-[60] p-2 rounded-2xl max-w-sm pt-6 bg-gradient-to-br from-black via-cyan-700 to-slate-900 h-auto ${isDropdownOpen ? 'h-auto' : 'h-[32rem]'}`}>
+    <h2 className="text-2xl text-center font-bold underline">{plan.name}</h2>
+    <div className="flex justify-center items-center px-6">
+      <p className="text-6xl">{plan.price}</p>
+      <img src={iicon} alt="Info" className="z-[90] h-24 w-24 cursor-pointer" onClick={onToggle} />
     </div>
+    <p className="text-sm p-2 mx-12">{plan.description}</p>
+    <ul>
+      {plan.features.map(feature => (
+        <li key={feature} className="text-sm pt-3">{feature}</li>
+      ))}
+    </ul>
+    <Link to={plan.buttonLink} className="block mt-6 px-6 py-2 text-base font-medium rounded-md text-white bg-teal-600 hover:bg-indigo-700">
+      {plan.buttonText}
+    </Link>
+    {isDropdownOpen && (
+      <div className="flex">
+      <div className=" mt-4 bg-gradient-to-br grow from-black via-cyan-700 to-slate-800 p-5 rounded-lg shadow-lg">
+        <h3 className="text-2xl text-teal-300 font-bold">{plan.name} Plan Details</h3>
+        <p className="mt-2 text-xs mx-2">{plan.info}</p>
+        <p className="font-semibold text-lg underline my-4 text-green-300">{plan.workload}</p>
+        <ul className="text-sm pl-5">
+          {plan.videos.map(video => (
+            <li key={video}>{video}</li>
+          ))}
+        </ul>
+      </div> 
+      </div>
+    )}
   </div>
+ 
 );
 
-const PricingPlan = ({ plan }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+const PricingTable = () => {
+  const [openDropdown, setOpenDropdown] = useState(null);
+
+  const toggleDropdown = (planName) => {
+    setOpenDropdown(openDropdown === planName ? null : planName);
+  };
 
   return (
-    <div className={`p-2 rounded-2xl  max-w-sm pt-6 bg-gradient-to-br from-black via-cyan-700 to-slate-900 h-[32rem] ${plan.bestDeal ? 'bg-cyan-500 text-white z-[60]' : 'bg-gradient-to-br from-cyan-900 via-cyan-800 z-[60] to-slate-800'}`}>
-      <h2 className="text-2xl text-center font-bold underline">{plan.name}</h2>
-      <div className="flex justify-center items-center px-6">
-        <p className="text-6xl ">{plan.price}</p>
-        <img src={iicon} alt="Info" className="z-[60] h-24 w-24 cursor-pointer" onClick={() => setIsModalOpen(true)} />
-      </div>
-      <p className="text-sm p-2 mx-12">{plan.description}</p>
-      <ul>
-        {plan.features.map(feature => (
-          <li key={feature} className="text-sm pt-3 ">{feature}</li>
-        ))}
-      </ul>
-      <Link to={plan.buttonLink} className="block mt-6 px-6 py-2 text-base font-medium rounded-md text-white bg-teal-600 hover:bg-indigo-700">
-        {plan.buttonText}
-      </Link>
-      {isModalOpen && <Modal content={plan} onClose={() => setIsModalOpen(false)} />}
+    <div className="p-6 space-x-4 flex justify-center items-stretch">
+      {plans.map(plan => (
+        <PricingPlan
+          key={plan.name}
+          plan={plan}
+          isDropdownOpen={openDropdown === plan.name}
+          onToggle={() => toggleDropdown(plan.name)}
+        />
+      ))}
     </div>
   );
 };
-
-
-const PricingTable = () => (
-  
-    <div className="p-6 space-x-4 flex justify-center items-stretch">
-      {plans.map(plan => <PricingPlan key={plan.name} plan={plan} />)}
-    
-    </div>
-  
-);
 
 export default PricingTable;

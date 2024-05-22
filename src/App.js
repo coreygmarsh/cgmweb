@@ -15,6 +15,16 @@ import Professional from './Packages/Professional';
 import Basic from './Packages/Basic';
 import Enterprise from "./Packages/Enterprise"
 import ParallaxGallery from './components/Library/ParallaxGallery';
+import Section1 from "./components/Library/Sections/Section1"
+import Section2 from "./components/Library/Sections/Section2"
+import Section3 from "./components/Library/Sections/Section3"
+import Section4 from "./components/Library/Sections/Section4"
+import Section5 from "./components/Library/Sections/Section5"
+import Section6 from "./components/Library/Sections/Section6"
+import Section7 from "./components/Library/Sections/Section7"
+import Section8 from "./components/Library/Sections/Section8"
+import Section9 from "./components/Library/Sections/Section9"
+import Section10 from "./components/Library/Sections/Section10"
 const App = () => {
   return (
     <BrowserRouter className="">
@@ -22,7 +32,18 @@ const App = () => {
           <Route path="/">
             <Route index element={<Landing/>} />
           <Route path="/about" element={<AboutPage/>} />
+          
           <Route path="/library" element={<Library />} />
+            <Route path="/demo" element={<Section1 />} />
+            <Route path="/lyric" element={<Section2 />} />
+            <Route path="/testimonial" element={<Section3 />} />
+            <Route path="/graphicdesign" element={<Section4 />} />
+            <Route path="/founder" element={<Section5 />} />
+            <Route path="/motion" element={<Section6 />} />
+            <Route path="/photobook" element={<Section7 />} />
+            <Route path="/event" element={<Section8 />} />
+            <Route path="/explainer" element={<Section9/>} />
+            <Route path="/wedding" element={<Section10 />} />
 
           <Route path="/testimonials" element={<Services/>} />
             <Route path="/basic" element={<Basic/>} />

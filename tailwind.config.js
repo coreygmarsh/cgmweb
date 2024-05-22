@@ -1,17 +1,21 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme");
+const colors = require("tailwindcss/colors");
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
+
 module.exports = {
   content: ["./src/**/*.{html,js,jsx}"],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
         golden: '#FFD700', // Example golden color
       },
-      // You might want to add custom drop shadow styles here if needed
       boxShadow: {
         'sparkle': '0 0 8px 2px rgba(2, 232, 171, 1)', // Example shadow
       },
-
-      // Define custom fonts
       fontFamily: {
         'custom': ['YourCustomFont', 'sans-serif'],
         'customtwo': ['YourCustomFont2', 'sans-serif'],
@@ -22,12 +26,8 @@ module.exports = {
         'customseven': ['YourCustomFont7', 'sans-serif'],
         'customeight': ['YourCustomFont8', 'sans-serif'],
         'customnine': ['YourCustomFont9', 'sans-serif'],
-
       },
-      // Define all custom keyframes
-      
       keyframes: {
-        
         shimmer: {
           '0%, 100%': {
             textShadow: '0 0 5px #fff, 0 0 10px #fff, 0 0 20px #28827e, 0 0 30px #28827e, 0 0 40px #28827e, 0 0 50px #28827e, 0 0 60px #28827e',
@@ -45,13 +45,23 @@ module.exports = {
           '50%': { textShadow: '0 0 8px rgba(255, 255, 255, 0.7)' },
         },
       },
-      // Define all custom animations
       animation: {
         shimmer: 'shimmer 2s infinite alternate',
         slideIn: 'slideIn 10s infinite linear',
-        glow: 'glow 5s infinite', // Adjusted to your requirement for glow effect
+        glow: 'glow 5s infinite',
       },
     },
   },
-  plugins: [],
-}
+  plugins: [
+    function addVariablesForColors({ addBase, theme }) {
+      let allColors = flattenColorPalette(theme("colors"));
+      let newVars = Object.fromEntries(
+        Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+      );
+
+      addBase({
+        ":root": newVars,
+      });
+    },
+  ],
+};

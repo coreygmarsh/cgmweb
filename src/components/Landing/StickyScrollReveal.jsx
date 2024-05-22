@@ -1,86 +1,46 @@
-import React, { useRef, useState } from "react";
-import { useMotionValueEvent, useScroll, motion } from "framer-motion";
-import { cn } from "../utils/cn"; // Ensure you have an equivalent JS utility for className concatenations
+import React, { useEffect } from 'react';
 
-export const StickyScroll = ({ content, contentClassName }) => {
-  const [activeCard, setActiveCard] = useState(0);
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    // Uncomment line below and comment the other if you DON'T want the overflow container and want it to change on the entire page scroll
-    // target: ref
-    container: ref,
-    offset: ["start start", "end start"],
-  });
-  const cardLength = content.length;
 
-  useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    const cardsBreakpoints = content.map((_, index) => index / cardLength);
-    const closestBreakpointIndex = cardsBreakpoints.reduce(
-      (acc, breakpoint, index) => {
-        const distance = Math.abs(latest - breakpoint);
-        if (distance < Math.abs(latest - cardsBreakpoints[acc])) {
-          return index;
-        }
-        return acc;
-      },
-      0
-    );
-    setActiveCard(closestBreakpointIndex);
-  });
+const StickyScrollReveal = () => {
+  useEffect(() => {
+    const handleScroll = () => {
+      const sidebar = document.querySelector('.sidebar');
+      const sidebarContent = document.querySelector('.content-wrapper');
 
-  const backgroundColors = [
-    "var(--slate-900)",
-    "var(--black)",
-    "var(--neutral-900)",
-  ];
-  const linearGradients = [
-    "linear-gradient(to bottom right, var(--cyan-500), var(--emerald-500))",
-    "linear-gradient(to bottom right, var(--pink-500), var(--indigo-500))",
-    "linear-gradient(to bottom right, var(--orange-500), var(--yellow-500))",
-  ];
+      const scrollTop = window.scrollY;
+      const viewportHeight = window.innerHeight;
+      const sidebarTop = sidebar.getBoundingClientRect().top + window.pageYOffset;
+      const contentHeight = sidebarContent.getBoundingClientRect().height;
+
+      if (scrollTop >= contentHeight - viewportHeight + sidebarTop) {
+        sidebarContent.style.transform = `translateY(-${contentHeight - viewportHeight + sidebarTop}px)`;
+        sidebarContent.style.position = 'fixed';
+      } else {
+        sidebarContent.style.transform = '';
+        sidebarContent.style.position = '';
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <motion.div
-      animate={{
-        backgroundColor: backgroundColors[activeCard % backgroundColors.length],
-      }}
-      className="h-[30rem] overflow-y-auto flex justify-center relative space-x-10 rounded-md p-10"
-      ref={ref}
-    >
-      <div className="div relative flex items-start px-4">
-        <div className="max-w-2xl">
-          {content.map((item, index) => (
-            <div key={item.title + index} className="my-20">
-              <motion.h2
-                initial={{ opacity: 0 }}
-                animate={{ opacity: activeCard === index ? 1 : 0.3 }}
-                className="text-2xl font-bold text-slate-100"
-              >
-                {item.title}
-              </motion.h2>
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: activeCard === index ? 1 : 0.3 }}
-                className="text-kg text-slate-300 max-w-sm mt-10"
-              >
-                {item.description}
-              </motion.p>
-            </div>
+    <div className="flex justify-center bg-transparent text-white font-sans text-lg min-h-screen w-screen z-0">
+      <div className="main w-2/3 m-5">
+        {Array.from({ length: 9 }).map((_, index) => (
+          <div key={index} className="w-full h-96 bg-gradient-to-r from-teal-600 to-cyan-700 mb-5 rounded-lg"></div>
+        ))}
+      </div>
+      <div className="sidebar w-2/5 m-5">
+        <div className="content-wrapper">
+          {Array.from({ length: 4 }).map((_, index) => (
+            <div key={index} className="w-96 h-96 bg-gradient-to-r from-green-600 to-teal-400 mb-5 rounded-lg"></div>
           ))}
-          <div className="h-40" />
         </div>
       </div>
-      <motion.div
-        animate={{
-          background: linearGradients[activeCard % linearGradients.length],
-        }}
-        className={cn(
-          "hidden lg:block h-60 w-80 rounded-md bg-white sticky top-10 overflow-hidden",
-          contentClassName
-        )}
-      >
-        {content[activeCard].content ?? null}
-      </motion.div>
-    </motion.div>
+    </div>
   );
 };
+
+export default StickyScrollReveal;
