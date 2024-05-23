@@ -50,7 +50,7 @@ const aboutItems = [
 
 const About = () => {
   return (
-    <div className="bg-gradient-to-b from-cyan-800 via-teal-700 to-slate-800 h-[100vh] flex-col w-[100vw]">
+    <div className="bg-gradient-to-b px-24 from-cyan-800 via-teal-700 to-slate-800 h-[100vh] flex-col w-[100vw]">
       <Navbar/> 
     {/* <p className='text-9xl font-customeight tracking-widest text-green-300 font-bold mb-4 pt-8 text-center'>About</p> */}
       {/* <div className='pt-24'><CardStack items={aboutItems} /></div> */}

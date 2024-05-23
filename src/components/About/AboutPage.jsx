@@ -1,10 +1,9 @@
 import React from 'react';
 import topography from "../../images/svgs/topography.svg";
-import { Eser, Harmony, Outdoor, Rootstwo, WaterPerson } from '../../images/ImgAssets';
+import { Eser, GreenLightning, Harmony, Outdoor, Rootstwo, WaterPerson } from '../../images/ImgAssets';
 import Corey from "../../images/Corey.png";
 import CustomSlider from './CustomSlider';
 import Navbar from '../Navbar/Navbar';
-import pattern from "../../images/svgs/pattern.svg";
 
 const slides = [
   {
@@ -46,37 +45,39 @@ const slides = [
 
 const AboutPage = () => {
   return (
-    <div className="w-full h-screen flex flex-col font-customnine lg:flex-row md:flex-row sm:flex-row overflow-hidden">
+    <div className="relative w-full min-h-screen font-customnine">
       <Navbar />
-      <div className="md:w-1/2 relative bg-gradient-to-b from-cyan-900 to-teal-700 bg-opacity-80 flex flex-col justify-center items-center p-8 md:min-h-screen">
-        <img 
-          src={topography} 
-          alt="Topography background" 
-          className="absolute inset-0 w-full h-full object-cover mix-blend-overlay" 
-          style={{ opacity: '0.2' }} 
-        />
-        <div className="z-10 text-center">
+      <img 
+        src={topography} 
+        alt="Topography background" 
+        className="absolute inset-0 w-full min-h-screen  object-cover " 
+        style={{ opacity: '0.9' }} 
+      />
+      <div className="fixed top-0 right-0 left-0  inset-0 bg-gradient-to-b from-cyan-900 to-teal-700 bg-opacity-10"></div>
+      <div className="relative flex flex-col  items-center justify-center min-h-screen">
+        <div className="text-center ">
           <img 
             src={Corey} 
             alt="Corey G. Marsh" 
             className="rounded-lg w-full max-w-xs md:max-w-md lg:max-w-lg" 
           />
           <h1 className="text-4xl md:text-5xl lg:text-6xl pt-8 text-white font-bold">Corey G. Marsh</h1>
-          <p className="text-2xl md:text-3xl lg:text-4xl pt-8 text-green-300">Creative Designer</p>
+          <p className="text-2xl md:text-3xl lg:text-4xl pt-8 text-green-300">Creative Consultant</p>
         </div>
       </div>
-      
-      <div className="md:w-1/2 bg-gradient-to-tl from-teal-700 to-cyan-900 text-white p-8 overflow-y-auto relative md:min-h-screen">
+      <div className="relative w-full h-screen bg-gradient-to-tl from-teal-700 to-cyan-900 text-white p-8 ">
+
         <img 
-          src={pattern} 
+          src={GreenLightning} 
           alt="Pattern background" 
-          className="absolute inset-0 w-full h-full object-cover mix-blend-overlay" 
-          style={{ opacity: '0.2' }} 
+          className="fixed inset-0 top-0 px-24 right-0 shadow-vision left-0 w-[100vw] min-h-[1000px] object-cover mix-blend-overlay" 
+          style={{ opacity: '0.1' }} 
         />
-        <div className='pb-4 xl:pb-72 lg:pb-60'></div>
+        <div className=''></div>
         <CustomSlider slides={slides} />
       </div>
-    </div>
+      </div>
+    
   );
 };
 

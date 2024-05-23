@@ -3,7 +3,7 @@ import Video1 from "../images/Video1.mp4"
 import PortraitMainOne from "../images/PortraitMainOne.png"
 import CGMWEB4 from "../images/CGMWEB4.mov"
 import WaterTwo from "../images/WaterTwo.mp4"
-
+import GreenLightning from "../images/GreenLightning.jpg"
 import About from "../images/About.mov"
 import Danita from "../images/Danita.JPG"
 import LetMeLoose from "../images/LetMeLoose.JPG"
@@ -49,6 +49,8 @@ import SunT from "../images/svgs/SunT.svg"
 import Roots from "../images/Roots.webp"
 import Rootstwo from "../images/Rootstwo.webp"
 import Harmony from "../images/Harmony.webp"
+import CausticLightning from "../images/CausticLightning.png"
+import CausLightning from "../images/CausLightning.jpg"
 export {
-Underwater, AboutBanner, Rootstwo, Harmony, Roots, SunT, BlackSea,Pool, Very, waterVector,CGMBizCard, Caustics, TwoSub, Subway, WaterTwo, Outdoor, WaterPerson, Avatar, Earth, PhotoShop,ThreeJs, FinalCutPro, PortraitThree, PremierePro, MernStack, Blender, AfterEffects, MernStackTwo, WaveEyes, WaveDrawing, GuitarOne, TwentyFive, WaterRoad, PortraitOne, Eser, Swim, Palace, Waves, Video1, PortraitMainOne, CGMWEB4, WavesThree, About, Danita, LetMeLoose, Sub3, Botanical, UnderwaterRoad, Tension,watertexture, 
+Underwater, CausticLightning, CausLightning, GreenLightning, AboutBanner, Rootstwo, Harmony, Roots, SunT, BlackSea,Pool, Very, waterVector,CGMBizCard, Caustics, TwoSub, Subway, WaterTwo, Outdoor, WaterPerson, Avatar, Earth, PhotoShop,ThreeJs, FinalCutPro, PortraitThree, PremierePro, MernStack, Blender, AfterEffects, MernStackTwo, WaveEyes, WaveDrawing, GuitarOne, TwentyFive, WaterRoad, PortraitOne, Eser, Swim, Palace, Waves, Video1, PortraitMainOne, CGMWEB4, WavesThree, About, Danita, LetMeLoose, Sub3, Botanical, UnderwaterRoad, Tension,watertexture, 
 }

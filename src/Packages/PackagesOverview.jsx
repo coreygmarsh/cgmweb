@@ -4,19 +4,19 @@ import PackageInfoCards from './PackageInfoCards';  // Ensure the path matches w
 const PackagesOverview = ({ selectedPackage }) => {
   const packages = [
     {
-      name: "Basic Package",
+      name: "Basic",
       cost: 900,
       features: [
         "1080p resolution",
         "(5) Revisions",
         "1 simultaneous request max",
-        "(1) 15 min consultation",
+        "(1) 30 min consultation",
         "Motion Graphics"
       ],
       monthlyOutput: "1 Product Video, 1 Explainer Video, 1 Founders Video"
     },
     {
-      name: "Professional Package",
+      name: "Professional",
       cost: 1500,
       features: [
         "4k resolution",
@@ -28,15 +28,16 @@ const PackagesOverview = ({ selectedPackage }) => {
       monthlyOutput: " 1 Testimonial, 1 Founders Video, 2 Event Videos"
     },
     {
-      name: "Enterprise Package",
-      cost: "Call to find out" ,
+      name: "Enterprise",
+      
       features: [
-        "4k resolution",
-        "Unlimited Revisions",
-        "4 simultaneous requests max",
-        "(4) 60 minute conferences",
-        "Motion Graphics",
-        "2D/3D animation"
+        // "TBD",
+        // "4k resolution",
+        // "Unlimited Revisions",
+        // "4 simultaneous requests max",
+        // "(4) 60 minute conferences",
+        // "Motion Graphics",
+        // "2D/3D animation"
       ],
       monthlyOutput: " 1 Product Video, 1 Founders Video, 10 commercials"
     }

@@ -47,8 +47,8 @@ const Section3 = () => {
         className="relative z-10 mx-24 min-h-screen bg-gradient-to-b from-cyan-800 to-slate-900 shadow-sparkle via-teal-700"
       >
         <Navbar />
-        <h1 className='text-center z-[100] pt-12 text-green-300 text-5xl md:text-7xl lg:text-9xl font-customnine tracking-widest'>
-          LIBRARY
+        <h1 className='text-center z-[100] pt-12 text-green-300 text-4xl md:text-7xl lg:text-9xl font-customnine tracking-widest'>
+          Testimonial Videos
         </h1>
         <div className="flex justify-center items-center text-center z-50 flex-wrap mx-4 md:mx-12 lg:mx-24 mt-12">
           <div className="flex w-full">

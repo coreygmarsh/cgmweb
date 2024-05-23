@@ -21,7 +21,7 @@ const  Enterprise = () => {
         <Navbar/>
  {/* Pass the selected package name to the PackagesOverview */}
  <div className='pt-2 flex-col '>
-            <PackagesOverview selectedPackage="Enterprise Package"/>
+            <PackagesOverview selectedPackage="Enterprise"/>
           </div>
           <div className='border-b-2 border-teal-500'></div>
 

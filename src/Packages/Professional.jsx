@@ -24,7 +24,7 @@ const Professional = () => {
 
           {/* Pass the selected package name to the PackagesOverview */}
           <div className='pt-2 flex-col '>
-            <PackagesOverview selectedPackage="Professional Package"/>
+            <PackagesOverview selectedPackage="Professional"/>
           </div>
           <div className='border-b-2 border-teal-500'></div>
 

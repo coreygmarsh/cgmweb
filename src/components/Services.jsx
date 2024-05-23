@@ -6,7 +6,7 @@ import pattern from "../images/svgs/pattern.svg";
 const Services = () => {
   return (
     <div className='bg-gradient-to-t h-[1000px] to-slate-800 via-teal-700 from-cyan-800'>
-      <div className='bg-gradient-to-b border-x border-teal-500 from-cyan-800 via-teal-700 to-slate-800 h-[1000px] mx-32 font-customnine tracking-wide text-center pt-32
+      <div className='bg-gradient-to-b border-x border-teal-500 shadow-sparkle from-cyan-800 via-teal-700 to-slate-800 h-[1000px] mx-24 font-customnine tracking-wide text-center pt-32
     text-white text-4xl' >
       <div>
       <img 

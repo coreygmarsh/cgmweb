@@ -1,14 +1,13 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route, } from 'react-router-dom';
-import About from './components/About/About'; 
+import { loadStripe } from '@stripe/stripe-js';
+import { Elements } from '@stripe/react-stripe-js';
 import Library from './components/Library/Library'; 
 import Testimonials from './components/Testimonials/Testimonials';
 import Contact from './components/Contact/Contact';
 import Landing from './components/Landing/Landing';
 import Services from './components/Services';
 import { BentoGrid, TypewriterEffect } from './components/utils/BentoGrid';
-import Slider from './components/Carousel';
-import Carousel from './components/Carousel';
 import AboutPage from './components/About/AboutPage';
 import PricingTable from "./components/PricingTable"
 import Professional from './Packages/Professional';
