@@ -3,6 +3,11 @@ import Navbar from '../components/Navbar/Navbar'
 import PackagesOverview from './PackagesOverview';
 import pattern from "../images/svgs/pattern.svg";
 import CreativeSolutionsForm from './CreativeForm';
+import { loadStripe } from '@stripe/stripe-js';
+import { Elements } from '@stripe/react-stripe-js';
+import CheckoutForm from '../Packages/Payment/CheckoutForm';
+
+const stripePromise = loadStripe('your-publishable-key-here'); // Replace with your Stripe publishable key
 
 const  Enterprise = () => {
   return (
@@ -29,6 +34,11 @@ const  Enterprise = () => {
             <CreativeSolutionsForm/>
           </div>
           <div className='border-b-2 pt-4 border-teal-500'></div>
+          <div className='pt-16'>
+            <Elements stripe={stripePromise}>
+              <CheckoutForm />
+            </Elements>
+          </div>
         </div>
       </div>
     </div>

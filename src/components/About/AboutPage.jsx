@@ -1,83 +1,48 @@
 import React from 'react';
 import topography from "../../images/svgs/topography.svg";
-import { Eser, GreenLightning, Harmony, Outdoor, Rootstwo, WaterPerson } from '../../images/ImgAssets';
+import { CausLightning, watertexture } from '../../images/ImgAssets';
 import Corey from "../../images/Corey.png";
-import CustomSlider from './CustomSlider';
 import Navbar from '../Navbar/Navbar';
-
-const slides = [
-  {
-    title: "Roots",
-    imgAlt: "Roots Image",
-    content: "1",
-    description: "Greetings, I am Corey Marsh, a seasoned digital creative with over a decade of experience harnessing cutting-edge tools like Final Cut Pro, Premiere Pro, After Effects, Canva, and Blender to produce captivating visuals...",
-    imgSrc: Rootstwo,
-  },
-  {
-    title: "Vision",
-    imgAlt: "Vision Image",
-    content: "2",
-    description: "My mission is unequivocal: to empower artists and businesses in articulating their narratives through the most compelling visual media...",
-    imgSrc: WaterPerson,
-  },
-  {
-    title: "Arsenal",
-    imgAlt: "Arsenal Image",
-    content: "3",
-    description: "My approach is distinguished by an unwavering commitment to understanding your unique story and translating it into a visually compelling narrative...",
-    imgSrc: Outdoor,
-  },
-  {
-    title: "Harmony",
-    imgAlt: "Harmony Image",
-    content: "4",
-    description: "Music was my first love, and it continues to influence my work as a digital designer in profound ways...",
-    imgSrc: Harmony,
-  },
-  {
-    title: "Values",
-    imgAlt: "Values Image",
-    content: "5",
-    description: "At the heart of my work are the values that guide every project I embark on: creativity, community, and connection...",
-    imgSrc: Eser,
-  },
-];
 
 const AboutPage = () => {
   return (
-    <div className="relative w-full min-h-screen font-customnine">
+    <div className="relative w-full h-[900px] overflow-hidden font-customnine bg-gradient-to-t from-teal-600 to-slate-900 ">
       <Navbar />
-      <img 
-        src={topography} 
-        alt="Topography background" 
-        className="absolute inset-0 w-full min-h-screen  object-cover " 
-        style={{ opacity: '0.9' }} 
-      />
-      <div className="fixed top-0 right-0 left-0  inset-0 bg-gradient-to-b from-cyan-900 to-teal-700 bg-opacity-10"></div>
-      <div className="relative flex flex-col  items-center justify-center min-h-screen">
-        <div className="text-center ">
-          <img 
-            src={Corey} 
-            alt="Corey G. Marsh" 
-            className="rounded-lg w-full max-w-xs md:max-w-md lg:max-w-lg" 
-          />
-          <h1 className="text-4xl md:text-5xl lg:text-6xl pt-8 text-white font-bold">Corey G. Marsh</h1>
-          <p className="text-2xl md:text-3xl lg:text-4xl pt-8 text-green-300">Creative Consultant</p>
-        </div>
-      </div>
-      <div className="relative w-full h-screen bg-gradient-to-tl from-teal-700 to-cyan-900 text-white p-8 ">
+      
+      <div className="fixed top-0 right-0 left-0 inset-0 bg-gradient-to-b mx-24 shadow-sparkle from-cyan-900 to-teal-700  bg-opacity-10"></div>
+      <div className="relative w-full h-auto bg-transparent text-white p-8">
 
         <img 
-          src={GreenLightning} 
+          src={watertexture} 
           alt="Pattern background" 
-          className="fixed inset-0 top-0 px-24 right-0 shadow-vision left-0 w-[100vw] min-h-[1000px] object-cover mix-blend-overlay" 
-          style={{ opacity: '0.1' }} 
+          className="fixed top-0 px-24 right-0 shadow-sparkle left-0 min-h-[1000px] mix-blend-overlay" 
+          style={{ opacity: '0.2' }} 
         />
-        <div className=''></div>
-        <CustomSlider slides={slides} />
+        <div className="relative z-10 max-w-7xl pt-12 ml-36 mr-32 flex flex-col lg:flex-row items-center lg:items-start gap-8">
+          <div className="w-full lg:w-2/3  flex justify-center lg:justify-start">
+            <img 
+              src={Corey} 
+              alt="Corey G. Marsh" 
+              className="rounded-lg w-full max-w-4xl md:max-w-md lg:max-w-screen mt-6 shadow-sparkle h-[420px] object-cover" 
+            />
+          </div>
+          <div className='pt-48'></div>
+          <div className="w-full lg:w-2/3 bg-gradient-to-tl shadow-sparkle from-transparent via-transparent to-slate-800 p-4  rounded-lg">
+           <div className='p-4 '> 
+            <p className="text-lg md:text-md lg:text-lg xl:text-sm">
+              <span className=' block text-center text-xl text-teal-500'>Corey G. Mar<span className="underline">sh</span></span> is a seasoned digital creative with over a decade of experience in harnessing cutting-edge tools like Final Cut Pro, Premiere Pro, After Effects, Canva, and Blender to produce captivating visuals. His mission is to empower artists and businesses in articulating their narratives through the most compelling visual media. Corey’s approach is distinguished by an unwavering commitment to understanding unique stories and translating them into visually compelling narratives.
+            </p>
+            <p className="text-lg md:text-md lg:text-lg xl:text-sm mt-4">
+              Music, Corey’s first love, continues to influence his work as a digital designer profoundly. This musical background enriches his creativity, allowing him to blend auditory and visual elements seamlessly. The fusion of these art forms enables Corey to craft <span className='text-green-300 italic'>harmonious</span> and <span className='text-green-300 italic'>impactful designs </span>that resonate deeply with audiences.
+            </p>
+            <p className="text-lg md:text-md lg:text-lg xl:text-sm mt-4">
+              At the heart of Corey’s work are the values that guide every project he embarks on: <span className='text-green-300 italic'>creativity, community, and connection.</span> These values ensure that each project not only meets but exceeds expectations, fostering a sense of community and engagement. Corey Marsh remains dedicated to pushing the boundaries of digital design, continuously seeking new ways to connect and inspire through his creative endeavors.
+            </p>
+            </div>
+          </div>
+        </div>
       </div>
-      </div>
-    
+    </div>
   );
 };
 

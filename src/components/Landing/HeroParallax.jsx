@@ -121,7 +121,7 @@ export const Header = () => {
        >
        <p className="leading-tight text-white">
                    <span className=" ml-1 text-white font-bold vision ">CGM Creative Solutions</span>
-                   <div className=" pt-4 text-5xl ml-1  text-white ">Imagine <span className="text-5xl italic text-green-300">BIGGER.</span></div>
+                   <div className=" pt-4 text-5xl ml-1  text-white ">Imagine <span className="text-5xl italic font-bold text-green-300">BIGGER.</span></div>
                 </p>
       </motion.h1>
       <p></p>

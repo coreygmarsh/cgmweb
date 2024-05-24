@@ -12,15 +12,15 @@ import topography from "../../images/svgs/topography.svg"
 
 const Landing = () => {
   const mockProducts = [
-    { title: "Product 1", link: "/product1", thumbnail: Pool },
-    { title: "Product 2", link: "/product2", thumbnail:  Outdoor},
-    { title: "Product 3", link: "/product3", thumbnail:  WaterPerson},
-    { title: "Product 4", link: "/product4", thumbnail: TwoSub },
-    { title: "Product 5", link: "/product5", thumbnail: Very },
-    { title: "Product 6", link: "/product6", thumbnail: Swim },
-    { title: "Product 7", link: "/product7", thumbnail: UnderwaterRoad },
-    { title: "Product 8", link: "/product8", thumbnail: BlackSea },
-    { title: "Product 9", link: "/product9", thumbnail: Waves },
+    { title: "Product 1", link: "/demo", thumbnail: Pool },
+    { title: "Product 2", link: "/lyric", thumbnail:  Outdoor},
+    { title: "Product 3", link: "/testimonial", thumbnail:  WaterPerson},
+    { title: "Product 4", link: "/graphicdesign", thumbnail: TwoSub },
+    { title: "Product 5", link: "/founder", thumbnail: Very },
+    { title: "Product 6", link: "/motion", thumbnail: Swim },
+    { title: "Product 7", link: "/photobook", thumbnail: UnderwaterRoad },
+    { title: "Product 8", link: "/event", thumbnail: BlackSea },
+    { title: "Product 9", link: "/explainer", thumbnail: Waves },
   
   ];
     return (

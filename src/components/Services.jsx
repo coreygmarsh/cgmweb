@@ -5,14 +5,14 @@ import PricingTable from './PricingTable'
 import pattern from "../images/svgs/pattern.svg";
 const Services = () => {
   return (
-    <div className='bg-gradient-to-t h-[1000px] to-slate-800 via-teal-700 from-cyan-800'>
-      <div className='bg-gradient-to-b border-x border-teal-500 shadow-sparkle from-cyan-800 via-teal-700 to-slate-800 h-[1000px] mx-24 font-customnine tracking-wide text-center pt-32
+    <div className='bg-gradient-to-t h-screen to-slate-800 via-teal-700 from-cyan-800'>
+      <div className='bg-gradient-to-b border-x border-teal-500 shadow-sparkle from-cyan-800 via-teal-700 to-slate-800 h-screen mx-24 font-customnine tracking-wide text-center pt-20
     text-white text-4xl' >
       <div>
       <img 
           src={pattern} 
           alt="Topography background" 
-          className="absolute inset-0 w-full h-[1000px] object-cover mix-blend-overlay" 
+          className="absolute inset-0 w-full h-screen object-cover mix-blend-overlay" 
           style={{ opacity: '0.05' }} 
         />
 

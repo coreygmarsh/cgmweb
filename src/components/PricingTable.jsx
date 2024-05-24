@@ -85,7 +85,7 @@ const PricingTable = () => {
   };
 
   return (
-    <div className="p-6 space-x-4 flex justify-center items-stretch">
+    <div className="p-2 space-x-4 flex justify-center items-stretch">
       {plans.map(plan => (
         <PricingPlan
           key={plan.name}
