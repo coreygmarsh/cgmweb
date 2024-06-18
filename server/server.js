@@ -3,11 +3,15 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const path = require('path');
-
+require('dotenv').config();
 
 // Configuration settings
-const MONGO_URI = 'mongodb+srv://coreymarshpm:zY07IgXuauC3Pq51@cluster0.bhwc5qn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
-const PORT = 5002; // Or any other port you want to use
+// const MONGO_URI = 'mongodb+srv://coreymarshpm:zY07IgXuauC3Pq51@cluster0.bhwc5qn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+// const PORT = 5002; 
+
+const MONGO_URI = process.env.MONGO_URI;
+const PORT = process.env.PORT || 5002; // Use the port from .env or default to 5002
+
 
 const app = express();
 app.use(cors());
