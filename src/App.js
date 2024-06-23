@@ -24,6 +24,8 @@ import Section7 from "./components/Library/Sections/Section7"
 import Section8 from "./components/Library/Sections/Section8"
 import Section9 from "./components/Library/Sections/Section9"
 import Section10 from "./components/Library/Sections/Section10"
+import Success from './wip/Success';
+import Cancel from './wip/Cancel';
 const App = () => {
   return (
     <BrowserRouter className="">
@@ -48,7 +50,8 @@ const App = () => {
             <Route path="/basic" element={<Basic/>} />
             <Route path="/professional" element={<Professional/>} />
             <Route path="/enterprise" element={<Enterprise/>} />
-
+            <Route path="/success" element={<Success/>} />
+            <Route path="/cancel" element={<Cancel/>} />
           <Route path="/contact" element={<Contact />} />
 
           </Route>

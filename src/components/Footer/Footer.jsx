@@ -57,17 +57,17 @@ const Footer = () => {
               Library
             </h6>
             <p className="mb-4">
-              <a className="text-neutral-600 text-md md:text-lg lg:text-xl tracking-widest font-customnine dark:text-neutral-200">
+              <a className="text-white text-md md:text-lg lg:text-xl tracking-widest font-customnine dark:text-neutral-200">
                 Graphics
               </a>
             </p>
             <p className="mb-4">
-              <a className="text-neutral-600 text-md md:text-lg lg:text-xl tracking-widest font-customnine dark:text-neutral-200">
+              <a className="text-white text-md md:text-lg lg:text-xl tracking-widest font-customnine dark:text-neutral-200">
                 Photo Work
               </a>
             </p>
             <p className="mb-4">
-              <a className="text-neutral-600 text-md md:text-lg lg:text-xl tracking-widest font-customnine dark:text-neutral-200">
+              <a className="text-white text-md md:text-lg lg:text-xl tracking-widest font-customnine dark:text-neutral-200">
                 Video Edits
               </a>
             </p>
@@ -77,27 +77,27 @@ const Footer = () => {
               Services
             </h6>
             <p className="mb-4">
-              <a className="text-neutral-600 text-md md:text-lg lg:text-xl tracking-widest font-customnine dark:text-neutral-200">
+              <a className="text-white text-md md:text-lg lg:text-xl tracking-widest font-customnine dark:text-neutral-200">
                 Video Editing
               </a>
             </p>
             <p className="mb-4">
-              <a className="text-neutral-600 text-md md:text-lg lg:text-xl tracking-widest font-customnine dark:text-neutral-200">
+              <a className="text-white text-md md:text-lg lg:text-xl tracking-widest font-customnine dark:text-neutral-200">
                 Graphic Design
               </a>
             </p>
             <p className="mb-4">
-              <a className="text-neutral-600 text-md md:text-lg lg:text-xl tracking-widest font-customnine dark:text-neutral-200">
+              <a className="text-white text-md md:text-lg lg:text-xl tracking-widest font-customnine dark:text-neutral-200">
                 Web Design
               </a>
             </p>
             <p className="mb-4">
-              <a className="text-neutral-600 text-md md:text-lg lg:text-xl tracking-widest font-customnine dark:text-neutral-200">
+              <a className="text-white text-md md:text-lg lg:text-xl tracking-widest font-customnine dark:text-neutral-200">
                 Photography
               </a>
             </p>
             <p className="mb-4">
-              <a className="text-neutral-600 text-md md:text-lg lg:text-xl tracking-widest font-customnine dark:text-neutral-200">
+              <a className="text-white text-md md:text-lg lg:text-xl tracking-widest font-customnine dark:text-neutral-200">
                 Videographer
               </a>
             </p>
@@ -126,7 +126,7 @@ const Footer = () => {
 
       <div className="bg-transparent p-6 text-center font-customnine dark:bg-slate-950">
         <span>© 2024 Copyright:</span>
-        <a className="font-semibold text-neutral-600 text-md dark:text-neutral-400 font-customnine" href="https://coreygmarsh.com/">
+        <a className="font-semibold text-neutral-600 text-md pl-2 dark:text-neutral-400 font-customnine" href="https://coreygmarsh.com/">
           Corey G. Marsh
         </a>
       </div>

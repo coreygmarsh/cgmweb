@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 
 const CheckoutForm = () => {
+  
   const stripe = useStripe();
   const elements = useElements();
   const [billingDetails, setBillingDetails] = useState({
@@ -49,31 +50,31 @@ const CheckoutForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-screen px-24 p-4">
-      <h2 className="text-3xl font-bold mb-4">Billing information</h2>
-      <div className="mb-4">
+    <form onSubmit={handleSubmit} className="w-full max-w-4xl mx-auto p-16 relative z-10">
+      <h2 className="text-3xl font-bold mb-8">Billing information</h2>
+      <div className="mb-16">
         <label className="block text-sm font-medium text-white">Country</label>
         <select
           name="country"
           value={billingDetails.country}
           onChange={handleInputChange}
-          className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+          className="mt-1 block w-full pl-3 pr-10 py-8 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md bg-black text-white relative z-20"
         >
           <option>United States</option>
           {/* Add more country options as needed */}
         </select>
       </div>
-      <div className="mb-4">
+      <div className="mb-16">
         <label className="block text-sm font-medium text-white">Address</label>
         <input
           type="text"
           name="address"
           value={billingDetails.address}
           onChange={handleInputChange}
-          className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+          className="mt-1 block w-full pl-3 pr-10 py-8 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md bg-black text-white relative z-20"
         />
       </div>
-      <div className="mb-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="my-16 grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
           <label className="block text-sm font-medium text-white">City</label>
           <input
@@ -81,36 +82,36 @@ const CheckoutForm = () => {
             name="city"
             value={billingDetails.city}
             onChange={handleInputChange}
-            className="mt-1 block w-full pl-3 pr-10 py-2 text-lg border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+            className="mt-1 block w-full pl-3 pr-10 py-8 text-lg border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md bg-black text-white relative z-20"
           />
         </div>
         <div>
-          <label className="block text-lg font-medium text-white">State</label>
+          <label className="block text-sm font-medium text-white">State</label>
           <input
             type="text"
             name="state"
             value={billingDetails.state}
             onChange={handleInputChange}
-            className="mt-1 block w-full pl-3 pr-10 py-2 text-lg border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+            className="mt-1 block w-full pl-3 pr-10 py-8 text-lg border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md bg-black text-white relative z-20"
           />
         </div>
       </div>
       <div className="mb-4">
-        <label className="block text-lg font-medium text-white">Zip / Postal code</label>
+        <label className="block text-sm font-medium text-white">Zip / Postal code</label>
         <input
           type="text"
           name="postalCode"
           value={billingDetails.postalCode}
           onChange={handleInputChange}
-          className="mt-1 block w-full pl-3 pr-10 py-2 text-lg border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+          className="mt-1 block w-full  pl-3 pr-10 py-8 text-lg border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md bg-black text-white relative z-20"
         />
       </div>
 
-      <h2 className="text-3xl text-white font-bold mb-4">Payment details</h2>
-      <CardElement className="p-4 border text-white border-gray-300 rounded mb-4" />
-
-      <button type="submit" disabled={!stripe} className="mt-4 bg-cyan-700 text-white py-2 px-4 rounded-xl text-xl">
-        Pay
+      <div className="pt-16">
+        <CardElement className="p-8 border text-white border-gray-300 rounded mb-4 bg-black relative z-20" />
+      </div>
+      <button type="submit" disabled={!stripe} className="mt-8 bg-teal-700 text-white py-2 px-4 rounded-xl text-xl">
+        Start Now
       </button>
     </form>
   );

@@ -4,8 +4,7 @@ import { motion } from 'framer-motion';
 import Navbar from "../../Navbar/Navbar";
 import "../../../index.css";
 import pattern from "../../../images/svgs/pattern.svg";
-
-
+import GraphicPanel from '../GraphicPanel';
 
 
 const Section4 = () => {
@@ -48,11 +47,11 @@ const Section4 = () => {
       >
         <Navbar />
         <h1 className='text-center z-[100] pt-12 text-green-300 text-5xl md:text-7xl lg:text-9xl font-customnine tracking-widest'>
-          LIBRARY
+          Graphics
         </h1>
         <div className="flex justify-center items-center text-center z-50 flex-wrap mx-4 md:mx-12 lg:mx-24 mt-12">
           <div className="flex w-full">
-            
+            <GraphicPanel/>
            
           </div>
         </div>

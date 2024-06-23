@@ -5,7 +5,7 @@ const PackageInfoCards = ({ name, cost, features, monthlyOutput }) => {
   const timestamp = new Date().toLocaleString(); // You can customize this to show different date/time formats
 
   return (
-    <div className="p-4 bg-black border-teal-500 border shadow-2xl bg-opacity-20 mx-96 h-[500px] rounded-lg ">
+    <div className="p-4 bg-black border-teal-500 border shadow-sparkle bg-opacity-20 mx-96 h-[500px] rounded-lg ">
       <h3 className="text-6xl underline text-green-300 font-bold pt-8">{name}</h3>
       <p className="text-5xl pt-8 font-semibold">${cost} per month</p>
       <h4 className="underline text-3xl text-green-300 pt-4">This package includes:</h4>
