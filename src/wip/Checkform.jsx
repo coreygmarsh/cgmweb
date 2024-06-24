@@ -29,7 +29,7 @@ const Checkform = () => {
       console.log('Payment confirmed successfully.');
     }
   };
-
+//team
   return (
     <div className='flex border-teal-500 bg-black bg-opacity-30 shadow-sparkle mx-[30rem] py-6 rounded-xl justify-center'>
       <form className="z-[40]">
