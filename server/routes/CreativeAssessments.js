@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const CreativeAssessment = require('../models/CreativeAssessment');
 
-router.post('/submit', async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const newSolution = new CreativeAssessment(req.body);
     await newSolution.save();

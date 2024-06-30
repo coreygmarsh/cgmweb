@@ -18,7 +18,7 @@ const Checkform = () => {
     const { error } = await stripe.confirmPayment({
       elements,
       confirmParams: {
-        return_url: 'https://cgmweb-4.onrender.com/success', // Replace with your success page URL
+        return_url: 'https://cgmweb-4.onrender.com/payments/success', // Replace with your success page URL
       },
     });
 
