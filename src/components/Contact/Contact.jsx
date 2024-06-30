@@ -24,7 +24,7 @@ const Contact = () => {
     e.preventDefault();
     const { name, email, message } = formData;
     try {
-      await axios.post('https://cgmweb-4.onrender.com//api/messages/send', { name, email, message });
+      await axios.post('https://cgmweb-4.onrender.com/api/messages/send', { name, email, message });
       alert('Message sent successfully');
       setFormData({
         name: '',
