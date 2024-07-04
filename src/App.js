@@ -28,7 +28,7 @@ import Success from './wip/Success';
 import Cancel from './wip/Cancel';
 const App = () => {
   return (
-    <BrowserRouter className="">
+    // <BrowserRouter className="">
         <Routes>
           <Route path="/">
             <Route index element={<Landing/>} />
@@ -56,7 +56,7 @@ const App = () => {
 
           </Route>
         </Routes>
-    </BrowserRouter>
+    // </BrowserRouter>
     
   );
 };
