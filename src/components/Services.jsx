@@ -3,10 +3,18 @@ import { BentoGrid } from './utils/BentoGrid'
 import Navbar from './Navbar/Navbar'
 import PricingTable from './PricingTable'
 import pattern from "../images/svgs/pattern.svg";
+import { BlackSea, CausLightning, watertexture } from '../images/ImgAssets';
 const Services = () => {
   return (
-    <div className='bg-gradient-to-t h-screen to-slate-800 via-teal-700 from-cyan-800'>
-      <div className='bg-gradient-to-b border-x border-teal-500 shadow-sparkle from-cyan-800 via-teal-700 to-slate-800 h-screen mx-24 font-customnine tracking-wide text-center pt-20
+    <div className='bg-gradient-to-t h-[2000px] to-slate-800 via-teal-900 from-cyan-950'>
+      <div className="relative w-full h-[2000px] text-white">
+        <img 
+          src={BlackSea} 
+          alt="Pattern background" 
+          className="fixed inset-0 px-24 h-[2000px] w-auto object-cover mix-blend-overlay opacity-80 shadow-sparkle" 
+        />
+
+      <div className='bg-gradient-to-b border-x border-teal-500 shadow-sparkle from-cyan-800 via-teal-700 to-slate-800 h-[2000px] mx-24 font-customnine tracking-wide text-center pt-20
     text-white text-4xl' >
       <div>
       <img 
@@ -20,19 +28,16 @@ const Services = () => {
             Select the right plan for you..
         </h1>
         <Navbar/>
-        {/* <ul>
-            <p>Photo</p>
-            <p>Video</p>
-            <p>Editing</p>
-            <p>Logos</p>
-            <p>Web Development</p>
-            <p></p>
-        </ul> */}
-        {/* <BentoGrid/> */}
+        <div>
+          <div className="">
+
+          </div>
+        </div>
         <div className='pt-16 '>
         <PricingTable/>
         </div>
         </div>
+      </div>
       </div>
     </div>
   )

@@ -21,38 +21,29 @@ const Landing = () => {
     { title: "Photo Shoots", link: "/photobook", thumbnail: UnderwaterRoad },
     { title: "Event Videos", link: "/event", thumbnail: BlackSea },
     { title: "Explainer Videos", link: "/explainer", thumbnail: Waves },
-  
   ];
-    return (
-      <div className="bg-gradient-to-b from-cyan-800 to-slate-800 bg-opacity-50 h-[5000px]">
-        <div className="w-full z-20">
-        <Navbar />
-       
-      </div>
-      <TracingBeam>
-      {/* Video Background Section */}
-      {/* <HeroSection /> */}
-      <div>
-      <HeroParallax products={mockProducts} />
-    </div>
-  
-      {/* Brand Photo and Message Section */}
-      <div
-       className="bg-gradient-to-b from-slate-800 via-teal-700 to-cyan-800 "
-       ><SectionTwo /></div>
-  
-      {/* Horizontal Scrolling Gallery */}
-      {/* <HorizontalGallery /> */}
-  
-      {/* Final Section for Graphic/Animation */}
-      <div 
-      className="bg-gradient-to-b to-slate-800 via-teal-700 from-cyan-800 w-full h-[1100px]"
-      ><FinalSection />
-      </div>
 
-      <div><Footer/></div>
+  return (
+    <div className="flex flex-col min-h-screen bg-gradient-to-b from-cyan-800 to-slate-800">
+      <div className="w-full z-20">
+        <Navbar />
+      </div>
+      <TracingBeam className="flex-grow">
+        <div>
+          <HeroParallax products={mockProducts} />
+        </div>
+  
+        <div className="bg-gradient-to-b from-slate-800 via-teal-700 to-cyan-800">
+          <SectionTwo />
+        </div>
+  
+        <div className="bg-gradient-to-b to-slate-800 via-teal-700 from-cyan-800">
+          <FinalSection />
+        </div>
       </TracingBeam>
+      <Footer />
     </div>
-    )
-  }
-  export default Landing
+  )
+}
+
+export default Landing

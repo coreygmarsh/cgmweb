@@ -1,206 +1,143 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate from react-router-dom
+import { useNavigate } from 'react-router-dom';
 import Navbar from "../Navbar/Navbar";
 import "../../index.css";
 import pattern from "../../images/svgs/pattern.svg";
-import { Animations, BlackSea, CausLightning, CausticLightning, Caustics, Danita, EventVideos, ExplainerVideos, FounderVideos, Graphics, GreenLightning, LetMeLoose, LibraryBackground, LyricVideos, ProductDemos, Testimonials, WaveEyes, WavesThree, watertexture } from '../../images/ImgAssets';
-import { Waves } from '@mui/icons-material';
-import { warmGray } from 'tailwindcss/colors';
-// import Section1 from "../Library/Sections/Section1"
+import { Animations, BlackSea, Danita, EventVideos, ExplainerVideos, FounderVideos, Graphics, LyricVideos, ProductDemos, Testimonials } from '../../images/ImgAssets';
 
 const content = [
-  { 
-    title: "Product Demos", 
+  {
+    title: "Product Demos",
     content: (
       <div>
-        {/* <h3>What is a Product Demo Video?</h3> */}
-        {/* <p>Product demo videos are designed to showcase the features, benefits, and use cases of your products. They help potential customers understand how your product works and why it's valuable.</p> */}
-        <h3>Why Use Product Demo Videos?</h3>
-        <ul>
-          <li>They engage potential customers</li>
-          <li>Highlight key features</li>
-          <li>Demonstrate use cases</li>
-          <li>Increase conversions</li>
-        </ul>
-        {/* <h3>Examples:</h3> */}
-        <p>Check out some of our previous product demo videos to see how we've helped other businesses showcase their products effectively.</p>
+        Elevate your brand with our professional product videos that highlight your product's
+        unique features and benefits, captivating your audience and driving engagement.
+        Our expert video editing team will bring your product to life, showcasing its practical
+        uses and advantages in a visually compelling way. Partner with us to create powerful
+        product videos that convert viewers into loyal customers.
       </div>
-    ), 
-    image: ProductDemos, 
-    link: "/demo" 
+    ),
+    image: ProductDemos,
+    link: "/demo"
   },
-  { 
-    title: "Lyric Videos", 
+  {
+    title: "Lyric Videos",
     content: (
       <div>
-        <h3>What is a Lyric Video?</h3>
-        {/* <p>Lyric videos display the lyrics of a song on the screen in sync with the music. They are a popular way for artists to engage their audience and enhance the listening experience.</p> */}
-        <h3>Benefits of Lyric Videos</h3>
-        <ul>
-          <li>Engage listeners</li>
-          <li>Enhance music sharing</li>
-          <li>Boost social media presence</li>
-          <li>Increase song accessibility</li>
-        </ul>
-        <h3>Our Work:</h3>
-        <p>Explore our portfolio of lyric videos to see how we've helped artists bring their lyrics to life visually.</p>
+        Transform your music with our stunning lyric videos that captivate
+        and engage your audience. Our talented video editing team will bring
+        your lyrics to life with visually appealing animations and synchronized
+        text, enhancing your song's impact. Partner with us to create compelling
+        lyric videos that resonate with listeners and elevate your brand.
       </div>
-    ), 
-    image: LyricVideos, 
-    link: "/lyric" 
+    ),
+    image: LyricVideos,
+    link: "/lyric"
   },
-  { 
-    title: "Testimonials", 
+  {
+    title: "Testimonials",
     content: (
       <div>
-        <h3>What are Testimonial Videos?</h3>
-        {/* <p>Testimonial videos feature real customers sharing their positive experiences with your products or services. They are a powerful tool for building trust and credibility with potential customers.</p> */}
-        <h3>Why Testimonial Videos Work</h3>
-        <ul>
-          <li>Builds trust</li>
-          <li>Showcases real experiences</li>
-          <li>Increases credibility</li>
-          <li>Boosts conversions</li>
-        </ul>
-        <h3>Client Stories:</h3>
-        <p>Watch some of our testimonial videos to see how we've helped businesses like yours build trust with their audience.</p>
+        Boost your credibility with our powerful testimonial videos that showcase
+        authentic customer experiences. Our skilled video editing team will craft
+        engaging narratives that highlight positive feedback and build trust with
+        your audience. Partner with us to create compelling testimonial videos that
+        convert prospects into loyal customers.
       </div>
-    ), 
-    image: Testimonials, 
-    link: "/testimonial" 
+    ),
+    image: Testimonials,
+    link: "/testimonial"
   },
-  { 
-    title: "Graphics", 
+  {
+    title: "Graphics",
     content: (
       <div>
-        <h3>What is Graphic Design?</h3>
-        {/* <p>Graphic design involves creating visual content to communicate messages. Our services include designing logos, infographics, promotional materials, and more.</p> */}
-        <h3>Benefits of Professional Graphics</h3>
-        <ul>
-          <li>Captures attention</li>
-          <li>Enhances brand identity</li>
-          <li>Communicates information clearly</li>
-          <li>Boosts marketing efforts</li>
-        </ul>
-        <h3>Our Designs:</h3>
-        <p>Check out our portfolio to see the professional graphics we've created for various clients.</p>
+        Enhance your brand's visual appeal with our expertly designed graphics
+        that capture and engage your audience. Our creative team will craft
+        stunning visuals tailored to your brand, ensuring consistency and
+        professionalism across all platforms. Partner with us to create
+        eye-catching graphics that elevate your brand and leave a lasting impression.
       </div>
-    ), 
-    image: Graphics, 
-    link: "/graphicdesign" 
+    ),
+    image: Graphics,
+    link: "/graphicdesign"
   },
-  { 
-    title: "Founder Videos", 
+  {
+    title: "Founder Videos",
     content: (
       <div>
-        <h3>What are Founder Videos?</h3>
-        {/* <p>Founder videos feature the founders of a company sharing their vision, mission, and the story behind the brand. They create a personal connection with the audience.</p> */}
-        <h3>Why Founder Videos Matter</h3>
-        <ul>
-          <li>Personalize your brand</li>
-          <li>Showcase your vision and mission</li>
-          <li>Build a connection with your audience</li>
-          <li>Enhance brand storytelling</li>
-        </ul>
-        <h3>Our Founders:</h3>
-        <p>Watch some of the founder videos we've created to see how we've helped businesses tell their story.</p>
+        Showcase the heart of your company with our engaging founder videos
+        that tell your unique story. Our expert video editing team will highlight
+        your vision, values, and journey, creating a personal connection with your
+        audience. Partner with us to create inspiring founder videos that build trust
+        and resonate with viewers.
       </div>
-    ), 
-    image: FounderVideos, 
-    link: "/founder" 
+    ),
+    image: FounderVideos,
+    link: "/founder"
   },
-  { 
-    title: "Animations", 
+  {
+    title: "Animations",
     content: (
       <div>
-        <h3>What are Animations?</h3>
-        {/* <p>Animations are visual representations created using motion graphics. They are used to explain complex concepts, tell stories, and add an engaging element to your content.</p> */}
-        <h3>Advantages of Using Animations</h3>
-        <ul>
-          <li>Engages viewers</li>
-          <li>Explains complex concepts</li>
-          <li>Enhances storytelling</li>
-          <li>Adds visual appeal</li>
-        </ul>
-        <h3>Our Animation Work:</h3>
-        <p>Take a look at our animation portfolio to see how we've brought ideas to life for our clients.</p>
+        Bring your ideas to life with our captivating animations that engage
+        and delight your audience. Our skilled animation team will create dynamic,
+        visually stunning animations tailored to your brand's message and goals.
+        Partner with us to create memorable animations that elevate your content
+        and leave a lasting impact.
       </div>
-    ), 
-    image: Animations, 
-    link: "/motion" 
+    ),
+    image: Animations,
+    link: "/motion"
   },
-  { 
-    title: "Photo Shoots", 
+  {
+    title: "Photo Shoots",
     content: (
       <div>
-        <h3>What are Photo Shoots?</h3>
-        {/* <p>Photo shoots involve capturing professional-quality images for various purposes, including branding, events, and personal projects.</p> */}
-        <h3>Benefits of Professional Photo Shoots</h3>
-        <ul>
-          <li>High-quality images</li>
-          <li>Tailored to your needs</li>
-          <li>Enhances visual appeal</li>
-          <li>Supports branding efforts</li>
-        </ul>
-        <h3>Our Photography:</h3>
-        <p>Explore our photo shoot portfolio to see the high-quality images we've captured for our clients.</p>
+        Capture the essence of your brand with our professional photo shoots
+        that highlight your products and services. Our experienced photography
+        team will create stunning visuals that tell your story and connect with
+        your audience. Partner with us for high-quality photo shoots that elevate
+        your brand's image and drive engagement.
       </div>
-    ), 
-    image: Danita, 
-    link: "/photobook" 
+    ),
+    image: Danita,
+    link: "/photobook"
   },
-  { 
-    title: "Event Videos", 
+  {
+    title: "Event Videos",
     content: (
       <div>
-        <h3>What are Event Videos?</h3>
-        {/* <p>Event videos capture the highlights and important moments of special events, creating a lasting memory that can be shared and cherished.</p> */}
-        <h3>Why Choose Event Videos?</h3>
-        <ul>
-          <li>Capture special moments</li>
-          <li>Create lasting memories</li>
-          <li>Share with friends and family</li>
-          <li>Professional quality</li>
-        </ul>
-        <h3>Our Event Highlights:</h3>
-        <p>Watch some of the event videos we've created to see how we've captured special moments for our clients.</p>
+        Relive your special moments with our expertly crafted event videos that capture
+        every highlight. Our skilled video editing team will transform your event footage
+        into a dynamic, engaging narrative that showcases the best moments. Partner with
+        us to create memorable event videos that connect with your audience and preserve
+        the excitement.
       </div>
-    ), 
-    image: EventVideos, 
-    link: "/event" 
+    ),
+    image: EventVideos,
+    link: "/event"
   },
-  { 
-    title: "Explainer Videos", 
+  {
+    title: "Explainer Videos",
     content: (
       <div>
-        <h3>What are Explainer Videos?</h3>
-        {/* <p>Explainer videos use visuals and narratives to break down complex concepts into easy-to-understand information, making it accessible to a broader audience.</p> */}
-        <h3>Benefits of Explainer Videos</h3>
-        <ul>
-          <li>Simplifies complex information</li>
-          <li>Engages viewers</li>
-          <li>Increases understanding</li>
-          <li>Enhances communication</li>
-        </ul>
-        <h3>Our Explainers:</h3>
-        <p>Check out our portfolio of explainer videos to see how we've helped clients simplify their messages.</p>
+        Simplify complex concepts with our engaging explainer videos that effectively
+        communicate your message. Our expert video editing team will create clear,
+        concise, and visually appealing videos that break down your ideas and captivate
+        your audience. Partner with us to produce impactful explainer videos that enhance
+        understanding and drive action.
       </div>
-    ), 
-    image: ExplainerVideos, 
-    link: "/explainer" 
-  },
-  { 
-    title: "Wedding", 
-    content: <div>Detailed content for section 10</div>, 
-    image: LibraryBackground, 
-    link: "/wedding" 
-  },
+    ),
+    image: ExplainerVideos,
+    link: "/explainer"
+  }
 ];
 
 const Library = () => {
   const [activeSection, setActiveSection] = useState(0);
-  const navigate = useNavigate(); // Use useNavigate hook for navigation
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -209,8 +146,8 @@ const Library = () => {
 
       sections.forEach((section, i) => {
         const rect = section.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom > 0) {
-          index = i - 1; 
+        if (rect.top < window.innerHeight / 2 && rect.bottom > window.innerHeight / 2) {
+          index = i;
         }
       });
 
@@ -225,7 +162,6 @@ const Library = () => {
     navigate(link);
   };
 
-  // Define your animation variants
   const pageVariants = {
     initial: {
       opacity: 0,
@@ -250,7 +186,7 @@ const Library = () => {
   return (
     <div className='relative min-h-screen bg-gradient-to-b from-teal-800 via-cyan-600 to-slate-900'>
       <div
-        className="absolute top-0 left-0 w-full h-full bg-center bg-cover  opacity-10"
+        className="absolute top-0 left-0 w-full h-full bg-center bg-cover opacity-10"
         style={{ backgroundImage: `url(${pattern})` }}
       ></div>
     
@@ -262,30 +198,30 @@ const Library = () => {
         transition={pageTransition}
         className="relative z-10 mx-24 min-h-screen bg-gradient-to-b from-cyan-950 to-slate-900 shadow-sparkle via-teal-700"
       >  
-      <div
-        className="absolute top-0 left-0  w-full h-full bg-center bg-cover mix-blend-overlay opacity-80"
-        style={{ backgroundImage: `url(${BlackSea})` }}
-      ></div>
+        <div
+          className="absolute top-0 left-0 w-full h-full bg-center bg-cover mix-blend-overlay opacity-80"
+          style={{ backgroundImage: `url(${BlackSea})` }}
+        ></div>
         <Navbar />
         <h1 className='text-center z-[70] pt-12 text-green-300 text-5xl md:text-7xl lg:text-9xl font-customnine tracking-widest'>
           LIBRARY
         </h1>
         <div className="flex justify-center items-center text-center z-50 flex-wrap mx-4 md:mx-12 lg:mx-24 mt-12">
-          <div className="flex w-full">
-            <div className="main w-1/2 m-5">
+          <div className="flex w-full flex-col lg:flex-row">
+            <div className="main w-full lg:w-1/2 m-5">
               {content.map((item, index) => (
-                <div key={index} className="section w-full h-96 bg-gradient-to-r from-teal-600 to-cyan-700 mb-5 rounded-lg relative">
-                  <img src={item.image} alt={item.title} className="absolute inset-0 w-full h-full px-8 border shadow-sparkle object-cover rounded-xl opacity-100" />
+                <div key={index} className="section w-full h-96 bg-gradient-to-r from-teal-600 to-cyan-700 mb-5 rounded-lg relative overflow-hidden">
+                  <img src={item.image} alt={item.title} className="absolute inset-0 w-full h-full object-cover rounded-xl opacity-60" />
                 </div>
               ))}
             </div>
-            <div className="sidebar z-[50] w-1/2 m-2 sticky top-40 h-screen">
-              <div className="content-wrapper shadow-sparkle h-96 p-5 bg-gradient-to-tl from-cyan-900 to-teal-600 rounded-lg ">
-                <h2 className="text-3xl text-white">{content[activeSection].title}</h2>
-                <div className="mt-4 mx-24 font-bold font-customnine text-white">{content[activeSection].content}</div>
+            <div className="sidebar z-[50] w-full lg:w-1/2 m-2 lg:sticky top-40 h-auto lg:h-screen">
+              <div className="content-wrapper shadow-sparkle h-auto lg:h-96 p-5 bg-gradient-to-tl from-cyan-900 to-teal-600 rounded-lg overflow-y-auto">
+                <h2 className="text-3xl text-white">{content[activeSection]?.title}</h2>
+                <div className="mt-4 text-base font-bold font-customnine text-white text-justify">{content[activeSection]?.content}</div>
                 <button
-                  className="mt-4 bg-green-500 hover:cursor-pointer  text-white py-2 px-4 rounded hover:bg-green-700"
-                  onClick={() => handleButtonClick(content[activeSection].link)}
+                  className="mt-4 bg-green-500 hover:cursor-pointer text-white py-2 px-4 rounded hover:bg-green-700"
+                  onClick={() => handleButtonClick(content[activeSection]?.link)}
                 >
                   Discover More
                 </button>

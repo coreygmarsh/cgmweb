@@ -41,10 +41,10 @@ const plans = [
     workload: "",
     videos: ['1 x Testimonial Video','1 x Founders Video', '1 x Trainer Video','1 x Product Video', '1 x Explainer Video', '4 x Event Videos', '1 x Recruitment Video']
   }
-];
+]
 
 const PricingPlan = ({ plan, isDropdownOpen, onToggle }) => (
-  <div className={`z-[60] p-2 rounded-2xl max-w-xs pt-6 bg-gradient-to-br from-black via-cyan-700 to-slate-900 h-auto ${isDropdownOpen ? 'h-auto' : 'h-[32rem]'}`}>
+  <div className={`z-[60] p-2 rounded-2xl w-full sm:w-80 md:w-64 lg:w-80 pt-6 bg-gradient-to-br from-black via-cyan-700 to-slate-900 ${isDropdownOpen ? 'h-auto' : 'h-[32rem]'}`}>
     <h2 className="text-2xl text-center font-bold underline">{plan.name}</h2>
     <div className="flex justify-center items-center px-6">
       <p className="text-6xl">{plan.price}</p>
@@ -61,20 +61,17 @@ const PricingPlan = ({ plan, isDropdownOpen, onToggle }) => (
     </Link>
     {isDropdownOpen && (
       <div className="flex items-center justify-center">
-      <div className=" mt-4 max-h-48 bg-gradient-to-br from-black via-cyan-700 to-slate-800 p-5 rounded-lg shadow-lg">
-        <h3 className="text-2xl text-teal-300 font-bold">{plan.name} Plan Details</h3>
-        {/* <p className="mt-2 text-xs mx-2">{plan.info}</p> */}
-        {/* <p className="font-semibold text-lg underline my-4 text-green-300">{plan.workload}</p> */}
-        <ul className="text-sm pl-5">
-          {plan.videos.map(video => (
-            <li key={video}>{video}</li>
-          ))}
-        </ul>
-      </div> 
+        <div className="mt-4 max-h-48 bg-gradient-to-br from-black via-cyan-700 to-slate-800 p-5 rounded-lg shadow-lg">
+          <h3 className="text-2xl text-teal-300 font-bold">{plan.name} Plan Details</h3>
+          <ul className="text-sm pl-5">
+            {plan.videos.map(video => (
+              <li key={video}>{video}</li>
+            ))}
+          </ul>
+        </div> 
       </div>
     )}
   </div>
- 
 );
 
 const PricingTable = () => {
@@ -85,7 +82,7 @@ const PricingTable = () => {
   };
 
   return (
-    <div className="p-2 space-x-4 flex justify-center items-stretch">
+    <div className="p-2 flex flex-col items-center lg:flex-row justify-center gap-4 border-teal-600">
       {plans.map(plan => (
         <PricingPlan
           key={plan.name}

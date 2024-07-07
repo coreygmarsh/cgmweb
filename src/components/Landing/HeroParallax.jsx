@@ -2,8 +2,6 @@ import React from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { Link } from "react-router-dom";
 import { BlackSea, Caustics, Eser, LetMeLoose, Outdoor, Underwater, UnderwaterRoad, Very, Waves, watertexture } from "../../images/ImgAssets";
-import { TracingBeam } from "../../ui/TracingBeam"
-// import { cn } from "@/utils/cn";
 
 export const HeroParallax = ({ products }) => {
   const firstRow = products.slice(0, 5);
@@ -41,90 +39,68 @@ export const HeroParallax = ({ products }) => {
     useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
     springConfig
   );
-  return (
-    <div className="px-6 xl:px-24 lg:px-24 md:px-12 sm:px-6  bg-gradient-to-b from-cyan-800 via-teal-700 to-slate-800">
-       
-    <div className=" border-cyan-200 shadow-sparkle">    
-    <div
-    ref={ref}
-    className="h-[250vh] py-40 overflow-hidden bg-center bg-cover w-full relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
-    style={{ backgroundImage: `url(${Very})` }}
-  >
 
-        {/* Gradient overlay */}
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-cyan-950 to-slate-800 opacity-80"></div>
-    <div className="fixed top-10 right-10 font-customseven text-2xl italic vision text-white hover:underline">Corey G. Marsh</div>
-       <Header />
-       
-     
-      <motion.div
-        style={{
-          rotateX,
-          rotateZ,
-          translateY,
-          opacity,
-        }}
-      >
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-4 mb-20" 
+  return (
+    <div className="px-4 sm:px-6 md:px-12 lg:px-24 xl:px-24 bg-gradient-to-b from-cyan-800 via-teal-700 to-slate-800">
+      <div className="border-cyan-200 shadow-sparkle">    
+        <div
+          ref={ref}
+          className="h-[250vh] py-20 sm:py-40 overflow-hidden bg-center bg-cover w-full relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+          style={{ backgroundImage: `url(${Very})` }}
         >
-          {firstRow.map((product) => (
-            <ProductCard
-              product={product}
-              translate={translateX}
-              key={product.title}
-            />
-          ))}
-        </motion.div>
-        <motion.div className="flex flex-row mb-20 space-x-4 bg-transparent ">
-          {secondRow.map((product) => (
-            <ProductCard
-              product={product}
-              translate={translateXReverse}
-              key={product.title}
-            />
-          ))}
-        </motion.div>
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-4">
-          {thirdRow.map((product) => (
-            <ProductCard
-              product={product}
-              translate={translateX}
-              key={product.title}
-            />
-          ))}
-        </motion.div>
-      </motion.div>
-    </div>
-    </div>
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-cyan-950 to-slate-800 opacity-80"></div>
+          <div className="fixed top-4 right-4 sm:top-10 sm:right-10 font-customseven text-lg sm:text-2xl italic vision text-white hover:underline">Corey G. Marsh</div>
+          <Header />
+       
+          <motion.div style={{ rotateX, rotateZ, translateY, opacity }}>
+            <motion.div className="flex flex-row-reverse space-x-reverse space-x-2 sm:space-x-4 mb-10 sm:mb-20">
+              {firstRow.map((product) => (
+                <ProductCard product={product} translate={translateX} key={product.title} />
+              ))}
+            </motion.div>
+            <motion.div className="flex flex-row mb-10 sm:mb-20 space-x-2 sm:space-x-4 bg-transparent">
+              {secondRow.map((product) => (
+                <ProductCard product={product} translate={translateXReverse} key={product.title} />
+              ))}
+            </motion.div>
+            <motion.div className="flex flex-row-reverse space-x-reverse space-x-2 sm:space-x-4">
+              {thirdRow.map((product) => (
+                <ProductCard product={product} translate={translateX} key={product.title} />
+              ))}
+            </motion.div>
+          </motion.div>
+        </div>
+      </div>
     </div>
   );
 };
 
 export const Header = () => {
-    const textRevealVariants = {
-        hidden: { opacity: 0.5, x: 0, scale: 2.0  },
-        visible: { 
-          opacity: 1, 
-          x: 0,
-          scale:1,
-          
-          transition: { duration: 0 , ease: "easeOut" }
-        },
-      };
+  const textRevealVariants = {
+    hidden: { opacity: 0.5, x: 0, scale: 2.0 },
+    visible: { 
+      opacity: 1, 
+      x: 0,
+      scale: 1,
+      transition: { duration: 0, ease: "easeOut" }
+    },
+  };
+
   return (
-    <div className="max-w-screen text-center relative py-20 md:py-40 rounded-lg bg-transparent px-4 w-full left-0 top-0">
+    <div className="max-w-screen text-center relative py-10 sm:py-20 md:py-40 rounded-lg bg-transparent px-4 w-full left-0 top-0">
       <motion.h1 
-      className="text-4xl w-full xl:text-[5rem] lg:text-[5rem] md:text-[5rem] sm:text-[4rem] font-customnine font-bold  dark:text-white "
-       variants={textRevealVariants}
-       initial="hidden"
+        className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl w-full font-customnine font-bold dark:text-white"
+        variants={textRevealVariants}
+        initial="hidden"
         animate="visible"
-       >
-       <p className="leading-tight text-white">
-                   <span className=" ml-1 text-white font-bold vision ">CGM Creative Solutions</span>
-                   <div className=" pt-4 text-5xl ml-1  text-white ">Imagine <span className="text-5xl italic font-bold text-green-300">BIGGER.</span></div>
-                </p>
+      >
+        <p className="leading-tight text-white">
+          <span className="ml-1 text-white font-bold vision">CGM Creative Solutions</span>
+          <div className="pt-2 sm:pt-4 text-3xl sm:text-4xl md:text-5xl ml-1 text-white">
+            Imagine <span className="italic font-bold text-green-300">BIGGER.</span>
+          </div>
+        </p>
       </motion.h1>
-      <p></p>
     </div>
   );
 };
@@ -132,25 +108,19 @@ export const Header = () => {
 export const ProductCard = ({ product, translate }) => {
   return (
     <motion.div
-      style={{
-        x: translate,
-      }}
-      whileHover={{
-        y: -20,
-      }}
-      className="group h-32 xl:h-72 lg:h-60 md:h-36 sm:h-32 w-[12rem] xl:w-[30rem] lg:w-[20rem] md:w-[12rem] sm:w-[10rem] relative flex-shrink-0"
+      style={{ x: translate }}
+      whileHover={{ y: -20 }}
+      className="group h-24 sm:h-32 md:h-36 lg:h-60 xl:h-72 w-32 sm:w-48 md:w-60 lg:w-72 xl:w-[28rem] hover:opacity-40 relative flex-shrink-0"
     >
       <Link to={product.link} className="block hover:shadow-2xl">
         <img
           src={product.thumbnail}
-          height="600"
-          width="600"
           className="object-cover object-left-top rounded-xl border-cyan-950 border shadow-2xl absolute h-full w-full inset-0"
           alt={product.title}
         />
       </Link>
       <div className="absolute inset-0 h-full w-full opacity-0 hover:opacity-80 bg-black pointer-events-none"></div>
-      <h2 className="absolute bottom-4 left-4 opacity-0 hover:opacity-100 text-white">
+      <h2 className="absolute bottom-2 left-2 sm:bottom-4 sm:left-4 opacity-0 group-hover:opacity-100 text-white text-xs sm:text-sm md:text-base">
         {product.title}
       </h2>
     </motion.div>
