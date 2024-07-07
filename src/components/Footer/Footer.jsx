@@ -16,8 +16,8 @@ const Footer = () => {
             <h6 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-customeight tracking-widest font-semibold uppercase">
               About
             </h6>
-            <p className="font-customnine hover:underline tracking-wide text-md md:text-lg lg:text-xl">
-            <a href="/about" className="text-white hover:underline text-md md:text-lg lg:text-xl tracking-widest font-customnine dark:text-neutral-200">
+            <p className="font-customnine hover:underline tracking-wide text-sm md:text-md lg:text-lg">
+            <a href="/about" className="text-white hover:underline text-sm md:text-md lg:text-lg tracking-widest font-customnine dark:text-neutral-200">
                 About Me
               </a>
             </p>
@@ -29,7 +29,7 @@ const Footer = () => {
             </h6>
 
             <p className="mb-4">
-              <a href="/demos" className="text-white hover:underline text-sm md:text-lg lg:text-xl tracking-widest font-customnine dark:text-neutral-200">
+              <a href="/demos" className="text-white hover:underline text-sm md:text-md lg:text-lg tracking-widest font-customnine dark:text-neutral-200">
                 Product Demos
               </a>
             </p>
@@ -89,17 +89,17 @@ const Footer = () => {
               Services
             </h6>
             <p className="mb-4">
-              <a href="/basic" className="text-white hover:underline text-md md:text-lg lg:text-xl tracking-widest font-customnine dark:text-neutral-200">
+              <a href="/basic" className="text-white hover:underline text-sm md:text-md lg:text-lg tracking-widest font-customnine dark:text-neutral-200">
                 Basic Package
               </a>
             </p>
             <p className="mb-4">
-              <a href="/professional" className="text-white hover:underline text-md md:text-lg lg:text-xl tracking-widest font-customnine dark:text-neutral-200">
+              <a href="/professional" className="text-white hover:underline text-sm md:text-md lg:text-lg tracking-widest font-customnine dark:text-neutral-200">
                 Professional Package
               </a>
             </p>
             <p className="mb-4">
-              <a href="/enterprise" className="text-white hover:underline text-md md:text-lg lg:text-xl tracking-widest font-customnine dark:text-neutral-200">
+              <a href="/enterprise" className="text-white hover:underline text-sm md:text-md lg:text-lg tracking-widest font-customnine dark:text-neutral-200">
                 Enterprise Package
               </a>
             </p>
@@ -109,7 +109,7 @@ const Footer = () => {
               Contact
             </h6>
            
-            <p className="mb-4 flex items-center hover:underline font-customnine text-md md:text-lg lg:text-xl justify-center md:justify-start">
+            <p className="mb-4 flex items-center hover:underline font-customnine text-sm md:text-md lg:text-lg justify-center md:justify-start">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="mr-3 h-5 w-5">
                 <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
                 <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
