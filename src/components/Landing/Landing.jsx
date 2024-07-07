@@ -8,7 +8,7 @@ import Footer from "../Footer/Footer"
 import { HeroParallax } from "./HeroParallax"
 import { BlackSea, Earth, Eser, Outdoor, Palace, Pool, Subway, Swim, Tension, TwoSub, Underwater, UnderwaterRoad, Very, WaterPerson, WaterRoad, WaveEyes, Waves } from "../../images/ImgAssets"
 import { TracingBeam } from "../../ui/TracingBeam"
-import topography from "../../images/svgs/topography.svg"
+
 
 const Landing = () => {
   const mockProducts = [

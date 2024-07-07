@@ -120,7 +120,7 @@ export const ProductCard = ({ product, translate }) => {
         />
       </Link>
       <div className="absolute inset-0 h-full w-full opacity-0 hover:opacity-80 bg-black pointer-events-none"></div>
-      <h2 className="absolute bottom-2 left-2 sm:bottom-4 sm:left-4 opacity-0 group-hover:opacity-100 text-white text-xs sm:text-sm md:text-base">
+      <h2 className="absolute bottom-2 left-2 sm:bottom-4 sm:left-4 font-customnine opacity-0 group-hover:opacity-100 text-white text-xs sm:text-sm md:text-base">
         {product.title}
       </h2>
     </motion.div>
