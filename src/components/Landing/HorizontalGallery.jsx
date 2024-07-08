@@ -27,7 +27,7 @@ const HorizontalGallery = () => {
     ref={ref} 
     animate={controls}
     initial="hidden"
-    variants={variants} className="horizontal-gallery h-[900px] mx-24">
+    variants={variants} className="horizontal-gallery h-[900px] mx-4 sm:mx-6 md:mx-12 lg:mx-24 xl:mx-24">
       {/* Repeat this div for each item you want in the gallery */}
       <div className="gallery-item bg-transparent">
        <TimelineCarousel/>

@@ -37,7 +37,7 @@ const Landing = () => {
           <SectionTwo />
         </div>
   
-        <div className="bg-gradient-to-b to-slate-800 via-teal-700 from-cyan-800">
+        <div className="bg-gradient-to-b to-slate-800 via-teal-700 pb-2 md:pb-4  from-cyan-800">
           <FinalSection />
         </div>
       </TracingBeam>

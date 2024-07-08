@@ -11,10 +11,10 @@ const Services = () => {
         <img 
           src={BlackSea} 
           alt="Pattern background" 
-          className="fixed inset-0 px-24 h-[2000px] w-auto object-cover mix-blend-overlay opacity-80 shadow-sparkle" 
+          className="fixed inset-0 px-4 sm:px-6 md:px-12 lg:px-24 xl:px-24 h-[2000px] w-auto object-cover mix-blend-overlay opacity-80 shadow-sparkle" 
         />
 
-      <div className='bg-gradient-to-b border-x border-teal-500 shadow-sparkle from-cyan-800 via-teal-700 to-slate-800 h-[2000px] mx-24 font-customnine tracking-wide text-center pt-20
+      <div className='bg-gradient-to-b border-x border-teal-500 shadow-sparkle from-cyan-800 via-teal-700 to-slate-800 h-[2000px] mx-4 sm:mx-6 md:mx-12 lg:mx-24 xl:mx-24 font-customnine tracking-wide text-center pt-20
     text-white text-4xl' >
       <div>
       <img 

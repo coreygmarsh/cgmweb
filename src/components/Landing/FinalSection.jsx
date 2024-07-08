@@ -27,9 +27,9 @@ const FinalSection = () => {
   return (
     <div
       ref={ref}
-      className="relative flex items-center  mx-6 xl:mx-24 lg:mx-24 md:mx-12 sm:mx-6  shadow-sparkle justify-center h-screen overflow-hidden"
+      className="relative flex items-center mx-4 sm:mx-6 md:mx-12 lg:mx-24 xl:mx-24 shadow-sparkle justify-center sm:h-screen h-[70vh] overflow-hidden"
     >
-      <video autoPlay loop muted className="absolute z-0 w-auto min-w-full h-screen max-w-none" style={{ objectFit: 'cover', height: '100%', width: '100%' }}>
+      <video autoPlay loop muted className="absolute z-0 w-auto min-w-full sm:h-screen h-[50vh] max-w-none" style={{ objectFit: 'cover', height: '100%', width: '100%' }}>
         <source src={WavesThree} type="video/mp4" />
         Your browser does not support the video tag.
       </video>

@@ -45,7 +45,7 @@ export const HeroParallax = ({ products }) => {
       <div className="border-cyan-200 shadow-sparkle">    
         <div
           ref={ref}
-          className="h-[250vh] py-20 sm:py-40 overflow-hidden bg-center bg-cover w-full relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+          className="md:h-[250vh] h-[160vh] py-20 sm:py-12 overflow-hidden bg-center bg-cover w-full relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
           style={{ backgroundImage: `url(${Very})` }}
         >
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-cyan-950 to-slate-800 opacity-80"></div>

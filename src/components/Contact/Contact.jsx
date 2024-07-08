@@ -38,7 +38,7 @@ const Contact = () => {
   };
 
   return (
-    <div className='bg-gradient-to-t px-24 to-slate-800 via-teal-700 from-cyan-800'>
+    <div className='bg-gradient-to-t z-[60] px-4 sm:px-6 md:px-12 lg:px-24 xl:px-24 to-slate-800 via-teal-700 from-cyan-800'>
       <div className='bg-gradient-to-b border-teal-500 from-cyan-800 shadow-sparkle via-teal-700 to-slate-800 h-screen w-full font-customnine tracking-wide text-center text-white'>
         <img 
           src={pattern} 
@@ -52,9 +52,9 @@ const Contact = () => {
           className="absolute inset-0 w-full h-screen bg-repeat object-cover mix-blend-overlay" 
           style={{ opacity: '0.50' }} 
         />
-        <Navbar className="absolute top-0 left-0 right-0 " />
-        <div className="relative z-[60] flex flex-col items-center justify-center h-full">
-          <div className="pb-16 w-full max-w-xl p-8 bg-gradient-to-br from-cyan-800 bg-opacity-20 rounded-lg shadow-sparkle">
+        <Navbar className=" " />
+        <div className="relative z-[60]  flex flex-col items-center justify-center h-full">
+          <div className="pb-16 w-[50vh] md:w-[70vh] p-8 bg-gradient-to-br from-cyan-800 bg-opacity-20 rounded-lg shadow-sparkle">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-green-300 text-center mb-4">Contact Me</h2>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>

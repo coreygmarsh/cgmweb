@@ -10,7 +10,7 @@ const Footer = () => {
        
       </div>
 
-      <div className="mx-6 md:mx-12 lg:mx-36 py-10 text-center md:text-left">
+      <div className="mx-6 md:mx-12 lg:mx-36 py-4 md:py-10 text-center md:text-left">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <h6 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-customeight tracking-widest font-semibold uppercase">
@@ -114,7 +114,7 @@ const Footer = () => {
                 <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
                 <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
               </svg>
-              <a href="mailto:coreymarshpm@gmail.com">Contact Me</a>
+              <a href="/contact">Contact Me</a>
             </p>
           </div>
         </div>

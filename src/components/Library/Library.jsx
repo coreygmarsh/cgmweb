@@ -196,7 +196,7 @@ const Library = () => {
         exit="out"
         variants={pageVariants}
         transition={pageTransition}
-        className="relative z-10 mx-24 min-h-screen bg-gradient-to-b from-cyan-950 to-slate-900 shadow-sparkle via-teal-700"
+        className="relative z-10 mx-4 sm:mx-6 md:mx-12 lg:mx-24 xl:mx-24 min-h-screen bg-gradient-to-b from-cyan-950 to-slate-900 shadow-sparkle via-teal-700"
       >  
         <div
           className="absolute top-0 left-0 w-full h-full bg-center bg-cover mix-blend-overlay opacity-80"
@@ -208,7 +208,7 @@ const Library = () => {
         </h1>
         <div className="flex justify-center items-center text-center z-50 flex-wrap mx-4 md:mx-12 lg:mx-24 mt-12">
           <div className="flex w-full flex-col lg:flex-row">
-            <div className="main w-full lg:w-1/2 m-5">
+            <div className="main w-full md:w-1/2 m-5">
               {content.map((item, index) => (
                 <div key={index} className="section w-full h-96 bg-gradient-to-r from-teal-600 to-cyan-700 mb-5 rounded-lg relative overflow-hidden">
                   <img src={item.image} alt={item.title} className="absolute inset-0 w-full h-full object-cover rounded-xl opacity-60" />
