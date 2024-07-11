@@ -49,7 +49,7 @@ const Basic = () => {
 
   return (
     <div className='bg-gradient-to-b to-slate-800 via-teal-700 from-cyan-800'>
-      <div className='bg-gradient-to-b border-x shadow-sparkle border-teal-500 from-cyan-800 via-teal-700 to-slate-800 h-[5000px] mx-24 font-customnine tracking-wide text-center pt-32 text-white text-4xl'>
+      <div className='bg-gradient-to-b border-x shadow-sparkle border-teal-500 from-cyan-800 via-teal-700 to-slate-800 h-[5000px] mx-4 sm:mx-6 md:mx-12 lg:mx-24 xl:mx-24 font-customnine tracking-wide text-center pt-32 text-white text-4xl'>
         <div>
           <img 
             src={pattern} 
@@ -60,7 +60,7 @@ const Basic = () => {
           <img 
             src={BlackSea} 
             alt="Topography background" 
-            className="absolute inset-0 w-full h-[5000px] bg-repeat px-24 object-cover mix-blend-overlay" 
+            className="absolute inset-0 w-full h-[5000px] bg-repeat px-4 sm:px-6 md:px-12 lg:px-24 xl:px-24 object-cover mix-blend-overlay" 
             style={{ opacity: '0.7' }} 
           />
           <Navbar />
@@ -71,7 +71,7 @@ const Basic = () => {
           <div className='pt-16'>
             <CreativeSolutionsForm />
           </div>
-          <div className='border-b-2 mx-24 pt-32 border-teal-500'></div>
+          <div className=' mx-24 pt-32 '></div>
           <div className='pt-16'>
             {clientSecret ? (
               <Elements stripe={stripePromise} options={{ clientSecret, appearance }}>

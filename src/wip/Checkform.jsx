@@ -10,7 +10,7 @@ const Checkform = () => {
 
     if (!stripe || !elements) {
       console.log('Stripe.js has not yet loaded.');
-      return; // Stripe.js has not yet loaded.
+      return;
     }
 
     console.log('Stripe and Elements are loaded, confirming payment...');
@@ -29,12 +29,15 @@ const Checkform = () => {
       console.log('Payment confirmed successfully.');
     }
   };
-//team
+
   return (
-    <div className='flex border-teal-500 bg-black bg-opacity-30 shadow-sparkle mx-[30rem] py-6 rounded-xl justify-center'>
-      <form className="z-[40]">
-        <PaymentElement />
-        <button onClick={handleButtonClick} className="mt-4 bg-teal-600 text-white py-2 px-4 text-sm cursor-pointer z-[80] rounded-md">
+    <div className="w-full max-w-md mx-auto px-4 sm:px-6 md:px-8 py-6 border border-teal-500 bg-black bg-opacity-30 shadow-sparkle rounded-xl">
+      <form className="z-10 space-y-4">
+        <PaymentElement className="mb-4" />
+        <button 
+          onClick={handleButtonClick} 
+          className="w-full bg-teal-600 text-white py-2 px-4 text-sm sm:text-base md:text-lg font-medium rounded-md hover:bg-teal-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-opacity-50"
+        >
           Start now
         </button>
       </form>

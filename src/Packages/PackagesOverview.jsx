@@ -7,39 +7,37 @@ const PackagesOverview = ({ selectedPackage }) => {
       name: "Basic",
       cost: 900,
       features: [
-        "1080p resolution",
-        "(5) Revisions",
-        "1 simultaneous request max",
-        "(1) 30 min consultation",
-        "Motion Graphics"
+        "5 Revisions per project",
+        "1 simultaneous request",
+        "(1) 15 min consultation",
+        "Up to 4 edits per month",
+        "Up to 4 minutes each",
       ],
-      monthlyOutput: "1 Product Video, 1 Explainer Video, 1 Founders Video"
+      
     },
     {
       name: "Professional",
       cost: 1500,
       features: [
-        "4k resolution",
-        "(10) Revisions",
-        "2 simultaneous requests max",
-        "(2) 30 mins consultations",
-        "Motion Graphics"
+        "10 Revisions per project",
+        "2 simultaneous requests",
+        "(1) 30 mins consultation",
+        "Up to 8 edits per month",
+        "Up to 10 minutes each",
       ],
-      monthlyOutput: " 1 Testimonial, 1 Founders Video, 2 Event Videos"
+      
     },
     {
       name: "Enterprise",
       
       features: [
-        // "TBD",
-        // "4k resolution",
-        // "Unlimited Revisions",
-        // "4 simultaneous requests max",
-        // "(4) 60 minute conferences",
-        // "Motion Graphics",
-        // "2D/3D animation"
+        "Unlimited Revisions",
+        "3 simultaneous requests",
+        "(1)60 minute conference",
+        "Up to 15 edits per month",
+        "Up to 20 minutes each",
       ],
-      monthlyOutput: " 1 Product Video, 1 Founders Video, 10 commercials"
+      
     }
   ];
 
