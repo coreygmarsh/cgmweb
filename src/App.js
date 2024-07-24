@@ -26,6 +26,7 @@ import Section9 from "./components/Library/Sections/Section9"
 import Section10 from "./components/Library/Sections/Section10"
 import Success from './wip/Success';
 import Cancel from './wip/Cancel';
+import Librarytwo from './wip/Librarytwo/Librarytwo';
 const App = () => {
   return (
     // <BrowserRouter className="">
@@ -34,7 +35,7 @@ const App = () => {
             <Route index element={<Landing/>} />
           <Route path="/about" element={<AboutPage/>} />
           
-          <Route path="/library" element={<Library />} />
+          <Route path="/library" element={<Librarytwo />} />
             <Route path="/demo" element={<Section1 />} />
             <Route path="/lyric" element={<Section2 />} />
             <Route path="/testimonial" element={<Section3 />} />
