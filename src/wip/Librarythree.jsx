@@ -1,5 +1,6 @@
 import React from 'react';
 import { Animations, BlackSea, CausticLightning, EventVideos, ExplainerVideos, FounderVideos, Graphics, LyricVideos, ProductDemos, Testimonials } from '../images/ImgAssets';
+import Navbar from '../components/Navbar/Navbar';
 
 const Button = ({ children, ...props }) => (
   <button 
@@ -121,6 +122,7 @@ const LibraryThree = () => {
 
   return (
     <div className='relative bg-gradient-to-b from-teal-800 font-customnine via-cyan-600 to-cyan-700 ' >
+        <Navbar/>
       <div
         className="absolute top-0 left-0 w-full h-full bg-center bg-cover mix-blend-overlay opacity-100"
         style={{ backgroundImage: `url(${BlackSea})` }}
