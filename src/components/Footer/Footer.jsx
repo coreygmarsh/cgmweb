@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="text-center px-6 md:px-12 lg:px-36 bg-slate-950 py-10 text-white">
+    <footer className=" min-h-screen flex-grow text-center px-2 md:px-4 lg:px-4 bg-slate-950 py-10 text-white">
       <div className="flex items-center justify-center py-6  dark:border-neutral-500 lg:justify-between">
         {/* <div className="mr-12 lg:block text-2xl md:text-3xl lg:text-4xl font-customnine">
           Get connected with me on social networks:
@@ -10,7 +10,7 @@ const Footer = () => {
        
       </div>
 
-      <div className="mx-6 md:mx-12 lg:mx-36 py-4 md:py-10 text-center md:text-left">
+      <div className="mx-6 md:mx-12 lg:mx-36 md:py-10 text-center md:text-left">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <h6 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-customeight tracking-widest font-semibold uppercase">
