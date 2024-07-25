@@ -120,12 +120,12 @@ const LibraryThree = () => {
   ];
 
   return (
-    <div className='relative bg-gradient-to-b from-teal-800 font-customnine via-cyan-600 to-cyan-700'>
+    <div className='relative bg-gradient-to-b from-teal-800 font-customnine via-cyan-600 to-cyan-700 ' >
       <div
         className="absolute top-0 left-0 w-full h-full bg-center bg-cover mix-blend-overlay opacity-100"
         style={{ backgroundImage: `url(${BlackSea})` }}
       ></div>
-      <div className="relative bg-gradient-to-tr via-slate-900 from-teal-600 to-cyan-900 mx-24 shadow-sparkle p-4 ">
+      <div className="relative bg-gradient-to-tr via-slate-900 from-teal-600 to-cyan-900 mx-4 sm:mx-6 md:mx-12 lg:mx-24 xl:mx-24 shadow-sparkle p-4 ">
       <div
         className="absolute top-0 left-0 w-full h-full bg-center bg-cover mix-blend-overlay opacity-100"
         style={{ backgroundImage: `url(${BlackSea})` }}
