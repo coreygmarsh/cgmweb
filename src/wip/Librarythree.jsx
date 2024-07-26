@@ -1,18 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Animations, BlackSea, CausticLightning, EventVideos, ExplainerVideos, FounderVideos, Graphics, LyricVideos, ProductDemos, Testimonials } from '../images/ImgAssets';
 import Navbar from '../components/Navbar/Navbar';
 
-const Button = ({ children, ...props }) => (
-  <button 
-    className="bg-teal-800 hover:bg-teal-600 shadow-2xl text-white font-bold py-2 px-4 rounded"
-    {...props}
-  >
-    {children}
-  </button>
-);
-
 const Card = ({ children }) => (
-  <div className="bg-teal-800 shadow-sparkle rounded-lg overflow-hidden">
+  <div className="bg-teal-800 shadow-sparkle rounded-lg overflow-hidden relative z-10">
     {children}
   </div>
 );
@@ -24,7 +16,7 @@ const ContentCard = ({ title, image, category, videoUrl }) => (
       <h3 className="font-bold text-white text-sm">{title}</h3>
       <p className='text-xs text-white'>{category}</p>
       {videoUrl && (
-        <div className="mt-4">
+        <div className="mt-4 relative z-20">
           <iframe
             width="100%"
             height="200"
@@ -33,6 +25,7 @@ const ContentCard = ({ title, image, category, videoUrl }) => (
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
+            className="relative z-30"
           ></iframe>
         </div>
       )}
@@ -40,11 +33,12 @@ const ContentCard = ({ title, image, category, videoUrl }) => (
   </Card>
 );
 
-const LibrarySection = ({ title, description, items }) => (
-  <section className="my-8">
-    <div className="flex justify-between items-center mb-4">
-      <h2 className="text-2xl underline text-green-300 tracking-wide font-bold">{title}</h2>
-      <Button>Book now!</Button>
+const LibrarySection = ({ title, description, items, link }) => (
+  <section className=" my-8 relative z-10">
+    <div className=" flex justify-between items-center mb-4">
+      <Link to={link} className="relative z-20">
+        <h2 className=" text-2xl cursor-pointer hover:underline text-green-300 tracking-wide font-bold">{title}</h2>
+      </Link>
     </div>
     <p className="text-gray-200 mx-6 md:mx-12 mb-4">{description}</p>
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -122,98 +116,70 @@ const LibraryThree = () => {
 
   return (
     <div className='relative bg-gradient-to-b from-teal-800 font-customnine via-cyan-600 to-cyan-700 ' >
+        <div className="relative z-50">
         <Navbar/>
+      </div>
       <div
         className="absolute top-0 left-0 w-full h-full bg-center bg-cover mix-blend-overlay opacity-100"
         style={{ backgroundImage: `url(${BlackSea})` }}
       ></div>
-      <div className="relative bg-gradient-to-tr via-slate-900 from-teal-600 to-cyan-900 mx-4 sm:mx-6 md:mx-12 lg:mx-24 xl:mx-24 shadow-sparkle p-4 ">
-      <div
-        className="absolute top-0 left-0 w-full h-full bg-center bg-cover mix-blend-overlay opacity-100"
-        style={{ backgroundImage: `url(${BlackSea})` }}
-      ></div> <p className='text-6xl tracking-widest font-customnine text-center pt-6 text-green-300'>LIBRARY</p>
-        <div className="">
-        <LibrarySection 
-          title="Product Demos" 
-          description="Elevate your brand with our professional product videos that highlight your product's
-          unique features and benefits, captivating your audience and driving engagement.
-          Our expert video editing team will bring your product to life, showcasing its practical
-          uses and advantages in a visually compelling way. Partner with us to create powerful
-          product videos that convert viewers into loyal customers."
-          items={ProductDemoItems}
-        />
-        <LibrarySection 
-          title="Lyric Videos" 
-          description=" Transform your music with our stunning lyric videos that captivate
-          and engage your audience. Our talented video editing team will bring
-          your lyrics to life with visually appealing animations and synchronized
-          text, enhancing your song's impact. Partner with us to create compelling
-          lyric videos that resonate with listeners and elevate your brand."
-          items={LyricVideoItems}
-        />
-        <LibrarySection 
-          title="Testimonials" 
-          description="Boost your credibility with our powerful testimonial videos that showcase
-          authentic customer experiences. Our skilled video editing team will craft
-          engaging narratives that highlight positive feedback and build trust with
-          your audience. Partner with us to create compelling testimonial videos that
-          convert prospects into loyal customers."
-          items={TestimonialsItems}
-        />
-        <LibrarySection 
-          title="Graphics" 
-          description=" Enhance your brand's visual appeal with our expertly designed graphics
-          that capture and engage your audience. Our creative team will craft
-          stunning visuals tailored to your brand, ensuring consistency and
-          professionalism across all platforms. Partner with us to create
-          eye-catching graphics that elevate your brand and leave a lasting impression."
-          items={GraphicsItems}
-        />
-        <LibrarySection 
-          title="Founder Videos" 
-          description="Showcase the heart of your company with our engaging founder videos
-          that tell your unique story. Our expert video editing team will highlight
-          your vision, values, and journey, creating a personal connection with your
-          audience. Partner with us to create inspiring founder videos that build trust
-          and resonate with viewers."
-          items={FounderItems}
-        />
-        <LibrarySection 
-          title="Animations" 
-          description="Bring your ideas to life with our captivating animations that engage
-          and delight your audience. Our skilled animation team will create dynamic,
-          visually stunning animations tailored to your brand's message and goals.
-          Partner with us to create memorable animations that elevate your content
-          and leave a lasting impact."
-          items={AnimationsItems}
-        />
-        <LibrarySection 
-          title="Photo Shoots" 
-          description="Capture the essence of your brand with our professional photo shoots
-          that highlight your products and services. Our experienced photography
-          team will create stunning visuals that tell your story and connect with
-          your audience. Partner with us for high-quality photo shoots that elevate
-          your brand's image and drive engagement."
-          items={PhotoShootsItems}
-        />
-        <LibrarySection 
-          title="Event Videos" 
-          description=" Relive your special moments with our expertly crafted event videos that capture
-          every highlight. Our skilled video editing team will transform your event footage
-          into a dynamic, engaging narrative that showcases the best moments. Partner with
-          us to create memorable event videos that connect with your audience and preserve
-          the excitement."
-          items={EventItems}
-        />
-        <LibrarySection 
-          title="Explainer Videos" 
-          description="Simplify complex concepts with our engaging explainer videos that effectively
-          communicate your message. Our expert video editing team will create clear,
-          concise, and visually appealing videos that break down your ideas and captivate
-          your audience. Partner with us to produce impactful explainer videos that enhance
-          understanding and drive action."
-          items={ExplainerItems}
-        />
+      <div className="relative z-10 bg-gradient-to-tr via-slate-900 from-teal-600 to-cyan-900 mx-4 sm:mx-6 md:mx-12 lg:mx-24 xl:mx-24 shadow-sparkle p-4 ">
+        <p className='text-6xl tracking-widest font-customnine text-center pt-6 text-green-300'>LIBRARY</p>
+        <div className="relative z-30">
+          <LibrarySection 
+            title="Product Demos" 
+            description="Elevate your brand with our professional product videos that highlight your product's unique features and benefits, captivating your audience and driving engagement. Our expert video editing team will bring your product to life, showcasing its practical uses and advantages in a visually compelling way. Partner with us to create powerful product videos that convert viewers into loyal customers."
+            items={ProductDemoItems}
+            link="/product-demos"
+          />
+          <LibrarySection 
+            title="Lyric Videos" 
+            description="Transform your music with our stunning lyric videos that captivate and engage your audience. Our talented video editing team will bring your lyrics to life with visually appealing animations and synchronized text, enhancing your song's impact. Partner with us to create compelling lyric videos that resonate with listeners and elevate your brand."
+            items={LyricVideoItems}
+            link="/lyric-videos"
+          />
+          <LibrarySection 
+            title="Testimonials" 
+            description="Boost your credibility with our powerful testimonial videos that showcase authentic customer experiences. Our skilled video editing team will craft engaging narratives that highlight positive feedback and build trust with your audience. Partner with us to create compelling testimonial videos that convert prospects into loyal customers."
+            items={TestimonialsItems}
+            link="/testimonials"
+          />
+          <LibrarySection 
+            title="Graphics" 
+            description="Enhance your brand's visual appeal with our expertly designed graphics that capture and engage your audience. Our creative team will craft stunning visuals tailored to your brand, ensuring consistency and professionalism across all platforms. Partner with us to create eye-catching graphics that elevate your brand and leave a lasting impression."
+            items={GraphicsItems}
+            link="/graphics"
+          />
+          <LibrarySection 
+            title="Founder Videos" 
+            description="Showcase the heart of your company with our engaging founder videos that tell your unique story. Our expert video editing team will highlight your vision, values, and journey, creating a personal connection with your audience. Partner with us to create inspiring founder videos that build trust and resonate with viewers."
+            items={FounderItems}
+            link="/founder-videos"
+          />
+          <LibrarySection 
+            title="Animations" 
+            description="Bring your ideas to life with our captivating animations that engage and delight your audience. Our skilled animation team will create dynamic, visually stunning animations tailored to your brand's message and goals. Partner with us to create memorable animations that elevate your content and leave a lasting impact."
+            items={AnimationsItems}
+            link="/animations"
+          />
+          <LibrarySection 
+            title="Photo Shoots" 
+            description="Capture the essence of your brand with our professional photo shoots that highlight your products and services. Our experienced photography team will create stunning visuals that tell your story and connect with your audience. Partner with us for high-quality photo shoots that elevate your brand's image and drive engagement."
+            items={PhotoShootsItems}
+            link="/photo-shoots"
+          />
+          <LibrarySection 
+            title="Event Videos" 
+            description="Relive your special moments with our expertly crafted event videos that capture every highlight. Our skilled video editing team will transform your event footage into a dynamic, engaging narrative that showcases the best moments. Partner with us to create memorable event videos that connect with your audience and preserve the excitement."
+            items={EventItems}
+            link="/event-videos"
+          />
+          <LibrarySection 
+            title="Explainer Videos" 
+            description="Simplify complex concepts with our engaging explainer videos that effectively communicate your message. Our expert video editing team will create clear, concise, and visually appealing videos that break down your ideas and captivate your audience. Partner with us to produce impactful explainer videos that enhance understanding and drive action."
+            items={ExplainerItems}
+            link="/explainer-videos"
+          />
         </div>
       </div>
     </div>
