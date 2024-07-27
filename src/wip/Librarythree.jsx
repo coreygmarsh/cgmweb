@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Animations, BlackSea, CausticLightning, EventVideos, ExplainerVideos, FounderVideos, Graphics, LyricVideos, ProductDemos, Testimonials } from '../images/ImgAssets';
+import { Animations, BlackSea, CausticLightning, Danita, EventVideos, ExplainerVideos, FounderVideos, Graphics, GuitarOne, LetMeLoose, LyricVideos, Pool, PortraitOne, PortraitThree, ProductDemos, Tension, Testimonials, TwentyFive } from '../images/ImgAssets';
 import Navbar from '../components/Navbar/Navbar';
 
 const Card = ({ children }) => (
@@ -73,10 +73,10 @@ const LibraryThree = () => {
   ];
 
   const GraphicsItems = [
-    { title: "Social Media Tips", image: Graphics, category: "Marketing", videoUrl: "dQw4w9WgXcQ" },
-    { title: "Quick Recipes", image: Graphics, category: "Lifestyle", videoUrl: "dQw4w9WgXcQ" },
-    { title: "Fitness Challenge", image: Graphics, category: "Health", videoUrl: "dQw4w9WgXcQ" },
-    { title: "DIY Crafts", image: Graphics, category: "Hobbies", videoUrl: "dQw4w9WgXcQ" },
+    { title: "Social Media Tips", image: LetMeLoose, category: "Marketing" },
+    { title: "Quick Recipes", image: Tension, category: "Lifestyle" },
+    { title: "Fitness Challenge", image: TwentyFive, category: "Health" },
+    { title: "DIY Crafts", image: Pool, category: "Hobbies" },
   ];
 
   const FounderItems = [
@@ -94,10 +94,10 @@ const LibraryThree = () => {
   ];
 
   const PhotoShootsItems = [
-    { title: "Social Media Tips", image: CausticLightning, category: "Marketing", videoUrl: "dQw4w9WgXcQ" },
-    { title: "Quick Recipes", image: CausticLightning, category: "Lifestyle", videoUrl: "dQw4w9WgXcQ" },
-    { title: "Fitness Challenge", image: CausticLightning, category: "Health", videoUrl: "dQw4w9WgXcQ" },
-    { title: "DIY Crafts", image: CausticLightning, category: "Hobbies", videoUrl: "dQw4w9WgXcQ" },
+    { title: "Social Media Tips", image: Danita, category: "Marketing" },
+    { title: "Quick Recipes", image: PortraitOne, category: "Lifestyle" },
+    { title: "Fitness Challenge", image: PortraitThree, category: "Health" },
+    { title: "DIY Crafts", image: GuitarOne, category: "Hobbies" },
   ];
 
   const EventItems = [
@@ -130,55 +130,55 @@ const LibraryThree = () => {
             title="Product Demos" 
             description="Elevate your brand with our professional product videos that highlight your product's unique features and benefits, captivating your audience and driving engagement. Our expert video editing team will bring your product to life, showcasing its practical uses and advantages in a visually compelling way. Partner with us to create powerful product videos that convert viewers into loyal customers."
             items={ProductDemoItems}
-            link="/product-demos"
+            link="/demo"
           />
           <LibrarySection 
             title="Lyric Videos" 
             description="Transform your music with our stunning lyric videos that captivate and engage your audience. Our talented video editing team will bring your lyrics to life with visually appealing animations and synchronized text, enhancing your song's impact. Partner with us to create compelling lyric videos that resonate with listeners and elevate your brand."
             items={LyricVideoItems}
-            link="/lyric-videos"
+            link="/lyric"
           />
           <LibrarySection 
             title="Testimonials" 
             description="Boost your credibility with our powerful testimonial videos that showcase authentic customer experiences. Our skilled video editing team will craft engaging narratives that highlight positive feedback and build trust with your audience. Partner with us to create compelling testimonial videos that convert prospects into loyal customers."
             items={TestimonialsItems}
-            link="/testimonials"
+            link="/testimonial"
           />
           <LibrarySection 
             title="Graphics" 
             description="Enhance your brand's visual appeal with our expertly designed graphics that capture and engage your audience. Our creative team will craft stunning visuals tailored to your brand, ensuring consistency and professionalism across all platforms. Partner with us to create eye-catching graphics that elevate your brand and leave a lasting impression."
             items={GraphicsItems}
-            link="/graphics"
+            link="/graphicdesign"
           />
           <LibrarySection 
             title="Founder Videos" 
             description="Showcase the heart of your company with our engaging founder videos that tell your unique story. Our expert video editing team will highlight your vision, values, and journey, creating a personal connection with your audience. Partner with us to create inspiring founder videos that build trust and resonate with viewers."
             items={FounderItems}
-            link="/founder-videos"
+            link="/founder"
           />
           <LibrarySection 
             title="Animations" 
             description="Bring your ideas to life with our captivating animations that engage and delight your audience. Our skilled animation team will create dynamic, visually stunning animations tailored to your brand's message and goals. Partner with us to create memorable animations that elevate your content and leave a lasting impact."
             items={AnimationsItems}
-            link="/animations"
+            link="/motion"
           />
           <LibrarySection 
             title="Photo Shoots" 
             description="Capture the essence of your brand with our professional photo shoots that highlight your products and services. Our experienced photography team will create stunning visuals that tell your story and connect with your audience. Partner with us for high-quality photo shoots that elevate your brand's image and drive engagement."
             items={PhotoShootsItems}
-            link="/photo-shoots"
+            link="/photobook"
           />
           <LibrarySection 
             title="Event Videos" 
             description="Relive your special moments with our expertly crafted event videos that capture every highlight. Our skilled video editing team will transform your event footage into a dynamic, engaging narrative that showcases the best moments. Partner with us to create memorable event videos that connect with your audience and preserve the excitement."
             items={EventItems}
-            link="/event-videos"
+            link="/event"
           />
           <LibrarySection 
             title="Explainer Videos" 
             description="Simplify complex concepts with our engaging explainer videos that effectively communicate your message. Our expert video editing team will create clear, concise, and visually appealing videos that break down your ideas and captivate your audience. Partner with us to produce impactful explainer videos that enhance understanding and drive action."
             items={ExplainerItems}
-            link="/explainer-videos"
+            link="/explainer"
           />
         </div>
       </div>
