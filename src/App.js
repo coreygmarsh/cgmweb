@@ -28,6 +28,10 @@ import Success from './wip/Success';
 import Cancel from './wip/Cancel';
 import Librarytwo from './wip/Librarytwo/Librarytwo';
 import LibraryThree from './wip/Librarythree';
+import BlogMain from './wip/Blog/BlogMain';
+import NavigatingNewSuccessBlog from './wip/Blog/Blogs/NavigatingNewSuccessBlog';
+import CorporateStorytellingBlog from './wip/Blog/Blogs/CorporateStorytellingBlog';
+import OvercomingOverSaturation from './wip/Blog/Blogs/OvercomingOverSaturation'
 const App = () => {
   return (
     // <BrowserRouter className="">
@@ -35,17 +39,25 @@ const App = () => {
           <Route path="/">
             <Route index element={<Landing/>} />
           <Route path="/about" element={<AboutPage/>} />
+
+        <Route path="/blog" element={<BlogMain/>} />
+          <Route path="/library/blog/navigating-the-new-success-algorithm" element={<NavigatingNewSuccessBlog />} />
+          <Route path="/library/blog/-art-of-corporate-video-storytelling" element={<CorporateStorytellingBlog />} />
+          <Route path="/library/blog/overcoming-oversaturation" element={<OvercomingOverSaturation />} />
+          {/* <Route path="/library/blog/creating-engaging-content-with-video" element={<CreatingEngagingContentBlog />} /> */}
+
+
           <Route path="/library" element={<LibraryThree />} />
-            <Route path="/demo" element={<Section1 />} />
-            <Route path="/lyric" element={<Section2 />} />
-            <Route path="/testimonial" element={<Section3 />} />
-            <Route path="/graphicdesign" element={<Section4 />} />
-            <Route path="/founder" element={<Section5 />} />
-            <Route path="/motion" element={<Section6 />} />
-            <Route path="/photobook" element={<Section7 />} />
-            <Route path="/event" element={<Section8 />} />
-            <Route path="/explainer" element={<Section9/>} />
-            <Route path="/wedding" element={<Section10 />} />
+          <Route path="/demo" element={<Section1 />} />
+          <Route path="/lyric" element={<Section2 />} />
+          <Route path="/testimonial" element={<Section3 />} />
+          <Route path="/graphicdesign" element={<Section4 />} />
+          <Route path="/founder" element={<Section5 />} />
+          <Route path="/motion" element={<Section6 />} />
+          <Route path="/photobook" element={<Section7 />} />
+          <Route path="/event" element={<Section8 />} />
+          <Route path="/explainer" element={<Section9/>} />
+          <Route path="/wedding" element={<Section10 />} />
 
           <Route path="/testimonials" element={<Services/>} />
             <Route path="/basic" element={<Basic/>} />
@@ -54,6 +66,11 @@ const App = () => {
             <Route path="/success" element={<Success/>} />
             <Route path="/cancel" element={<Cancel/>} />
           <Route path="/contact" element={<Contact />} />
+
+          {/* <Route path="/library/blog/:blogId" element={<BlogDetail />} /> */}
+
+          {/* <Route path="blog/navigating-the-new-success-algorithm" element={<NavigatingSuccessAlg/>} /> */}
+             
 
           </Route>
         </Routes>

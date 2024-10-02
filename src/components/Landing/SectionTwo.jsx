@@ -22,7 +22,7 @@ const SectionTwo = () => {
         hidden: { opacity: 0, scale: 0.75 },
       };    
   return (
-    <div className="flex items-center justify-center mx-4 sm:mx-6 md:mx-12 lg:mx-24 xl:mx-24 shadow-sparkle h:[30vh] xl:h-[100vh] bg-gradient-to-l from-cyan-900 to-slate-800" 
+    <div className="flex mx-4 sm:mx-6 md:mx-12 lg:mx-24 xl:mx-24 shadow-sparkle h:[30vh] xl:h-[100vh] bg-gradient-to-l from-cyan-900 to-slate-800" 
     style={{
         backgroundImage: `url${watertexture}`,
         // Or, if you prefer the other texture:

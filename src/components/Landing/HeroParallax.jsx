@@ -1,7 +1,7 @@
 import React from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { Link } from "react-router-dom";
-import { BlackSea, Caustics, Eser, LetMeLoose, Outdoor, Underwater, UnderwaterRoad, Very, Waves, watertexture } from "../../images/ImgAssets";
+import { BlackSea, CGMlogo, Caustics, Eser, LetMeLoose, Outdoor, Underwater, UnderwaterRoad, Very, Waves, watertexture } from "../../images/ImgAssets";
 
 export const HeroParallax = ({ products }) => {
   const firstRow = products.slice(0, 5);
@@ -49,7 +49,10 @@ export const HeroParallax = ({ products }) => {
           style={{ backgroundImage: `url(${Very})` }}
         >
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-cyan-950 to-slate-800 opacity-80"></div>
-          <div className="fixed top-4 right-4 sm:top-10 sm:right-10 font-customseven text-lg sm:text-2xl italic vision text-white hover:underline">Corey G. Marsh</div>
+          <div className="fixed top-0 left-4 sm:top-2 sm:left-10">
+            <img src={CGMlogo} alt="Logo" className="h-8 sm:h-20"/>
+          </div>
+          <div className="fixed top-4 right-4 sm:top-10 sm:right-10 font-customseven text-lg sm:text-2xl italic vision text-white hover:underline">Cinematic Global Minds</div>
           <Header />
        
           <motion.div style={{ rotateX, rotateZ, translateY, opacity }}>
@@ -95,8 +98,8 @@ export const Header = () => {
         animate="visible"
       >
         <p className="leading-tight text-white">
-          <span className="ml-1 text-white font-bold vision">CGM Creative Solutions</span>
-          <div className="pt-2 sm:pt-4 text-3xl sm:text-4xl md:text-5xl ml-1 text-white">
+          <span className="ml-1 text-white font-customtwo font-bold vision">CGM Creative Solutions</span>
+          <div className="pt-2 sm:pt-4 text-3xl sm:text-4xl md:text-5xl text-white">
             Imagine <span className="italic font-bold text-green-300">BIGGER.</span>
           </div>
         </p>

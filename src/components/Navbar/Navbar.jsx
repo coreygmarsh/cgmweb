@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import { motion } from 'framer-motion';
-
+import BlogMain from '../../wip/Blog/BlogMain';
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const zIndexClass = isSidebarOpen ? 'z-[80]' : 'z-[50]';
@@ -59,35 +59,42 @@ const Navbar = () => {
           <nav className="flex flex-col font-customnine tracking-widest z-[70] pt-14 items-center p-12">
             <Link
               to="/"
-              className="py-2 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl hover:text-green-300 nav-link"
+              className="py-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl hover:text-green-300 nav-link"
               onClick={() => setIsSidebarOpen(false)}
             >
               HOME
             </Link>
             <Link
               to="/about"
-              className="py-2 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl hover:text-green-300 nav-link"
+              className="py-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl hover:text-green-300 nav-link"
               onClick={() => setIsSidebarOpen(false)}
             >
               ABOUT
             </Link>
             <Link
+              to="/blog"
+              className="py-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl hover:text-green-300 nav-link"
+              onClick={() => setIsSidebarOpen(false)}
+            >
+              BLOG
+            </Link>
+            <Link
               to="/testimonials"
-              className="py-2 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl hover:text-green-300 nav-link"
+              className="py-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl hover:text-green-300 nav-link"
               onClick={() => setIsSidebarOpen(false)}
             >
               SERVICES
             </Link>
             <Link
               to="/library"
-              className="py-2 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl hover:text-green-300 nav-link"
+              className="py-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl hover:text-green-300 nav-link"
               onClick={() => setIsSidebarOpen(false)}
             >
               LIBRARY
             </Link>
             <Link
               to="/contact"
-              className="py-2 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl hover:text-green-300 nav-link"
+              className="py-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl hover:text-green-300 nav-link"
               onClick={() => setIsSidebarOpen(false)}
             >
               CONTACT

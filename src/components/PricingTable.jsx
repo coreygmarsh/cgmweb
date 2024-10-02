@@ -6,27 +6,27 @@ import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 const plans = [
   {
     name: 'Basic',
-    price: '$900',
+    price: '$1500',
     description: 'For single project individual creators editing needs.', 
-    features: ['5 Revisions per project', '1 simultaneous request', '(1) 15 min consultation', 'Up to 4 edits per month','Up to 4 minutes each'],
+    features: ['3 Revisions per project', '1 simultaneous request', '(1) 15 min consultation', 'Up to 4 projects','Up to 4 minutes each'],
     buttonText: 'Get Basic',
     buttonLink: '/basic',  
     
   },
   {
     name: 'Professional',
-    price: '$1500',
+    price: '$3000',
     description: 'For small teams/businesses with complex editing needs',
-    features: ['10 Revisions', '2 simultaneous requests', '(1) 30 mins consultation', 'Up to 8 edits per month', 'Up to 10 minutes each'],
+    features: ['6 Revisions per project', '2 simultaneous requests', '(1) 30 min consultation', 'Up to 8 projects', 'Up to 10 minutes each'],
     buttonText: 'Get Professional',
     buttonLink: '/professional',
    
   },
   {
     name: 'Enterprise',
-    price: '3000',
+    price: '4000',
     description: 'For large organizations/commercial high-volume edits.',
-    features: [ 'Unlimited Revisions', '3 simultaneous requests', '(1)60 minute conference', 'Up to 15 edits per month', 'Up to 20 minutes each'],
+    features: [ 'Unlimited Revisions', '3 simultaneous requests', '(1)60 minute conference', 'Up to 8 projects', 'Up to 20 minutes each'],
     buttonText: 'Get Enterprise',
     buttonLink: '/enterprise',
     

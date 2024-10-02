@@ -17,8 +17,8 @@ const Footer = () => {
               About
             </h6>
             <p className="font-customnine hover:underline tracking-wide text-sm md:text-md lg:text-lg">
-            <a href="/about" className="text-white hover:underline text-sm md:text-md lg:text-lg tracking-widest font-customnine dark:text-neutral-200">
-                About Me
+            <a href="/about" className="text-white hover:underline text-sm md:text-md lg:text-lg tracking-widest font-customthree dark:text-neutral-200">
+                About Us
               </a>
             </p>
           </div>
@@ -29,56 +29,56 @@ const Footer = () => {
             </h6>
 
             <p className="mb-4">
-              <a href="/demos" className="text-white hover:underline text-sm md:text-md lg:text-lg tracking-widest font-customnine dark:text-neutral-200">
+              <a href="/demos" className="text-white hover:underline text-sm md:text-md lg:text-lg tracking-widest font-customthree dark:text-neutral-200">
                 Product Demos
               </a>
             </p>
 
             <p className="mb-4">
-              <a href="/lyric" className="text-white hover:underline text-sm md:text-md lg:text-lg tracking-widest font-customnine dark:text-neutral-200">
-                Lyric Videos
+              <a href="/lyric" className="text-white hover:underline text-sm md:text-md lg:text-lg tracking-widest font-customthree dark:text-neutral-200">
+              Short Form Ads
               </a>
             </p>
             
             <p className="mb-4">
-              <a href="/testimonials" className="text-white hover:underline text-sm md:text-md lg:text-lg tracking-widest font-customnine dark:text-neutral-200">
-                Testimonials
+              <a href="/testimonials" className="text-white hover:underline text-sm md:text-md lg:text-lg tracking-widest font-customthree dark:text-neutral-200">
+              Training Videos
               </a>
             </p>
 
             <p className="mb-4">
-              <a href="/graphicdesign" className="text-white hover:underline text-sm md:text-md lg:text-lg tracking-widest font-customnine dark:text-neutral-200">
-                Graphic Design
+              <a href="/graphicdesign" className="text-white hover:underline text-sm md:text-md lg:text-lg tracking-widest font-customthree dark:text-neutral-200">
+              Testimonials
               </a>
             </p>
 
             <p className="mb-4">
-              <a href="/founder" className="text-white hover:underline text-sm md:text-md lg:text-lg tracking-widest font-customnine dark:text-neutral-200">
+              <a href="/founder" className="text-white hover:underline text-sm md:text-md lg:text-lg tracking-widest font-customthree dark:text-neutral-200">
                 Founder Videos
               </a>
             </p>
 
             <p className="mb-4">
-              <a href="/motions" className="text-white hover:underline text-sm md:text-md lg:text-lg tracking-widest font-customnine dark:text-neutral-200">
-                Animations
+              <a href="/motions" className="text-white hover:underline text-sm md:text-md lg:text-lg tracking-widest font-customthree dark:text-neutral-200">
+                Soundtracks
               </a>
             </p>
 
-            <p className="mb-4">
+            {/* <p className="mb-4">
               <a href="/photobook" className="text-white hover:underline text-sm md:text-md lg:text-lg tracking-widest font-customnine dark:text-neutral-200">
                 Photo Shoots
               </a>
-            </p>
+            </p> */}
 
             <p className="mb-4">
-              <a href="/event" className="text-white hover:underline text-sm md:text-md lg:text-lg tracking-widest font-customnine dark:text-neutral-200">
-                Event Videos
+              <a href="/event" className="text-white hover:underline text-sm md:text-md lg:text-lg tracking-widest font-customthree dark:text-neutral-200">
+              Explainer
               </a>
             </p>
 
             <p className="mb-4">
-              <a href="/explainer" className="text-white hover:underline text-sm md:text-md lg:text-lg tracking-widest font-customnine dark:text-neutral-200">
-               Explainer Videos
+              <a href="/explainer" className="text-white hover:underline text-sm md:text-md lg:text-lg tracking-widest font-customthree dark:text-neutral-200">
+              Graphics
               </a>
             </p>
 
@@ -89,17 +89,17 @@ const Footer = () => {
               Services
             </h6>
             <p className="mb-4">
-              <a href="/basic" className="text-white hover:underline text-sm md:text-md lg:text-lg tracking-widest font-customnine dark:text-neutral-200">
+              <a href="/basic" className="text-white hover:underline text-sm md:text-md lg:text-lg tracking-widest font-customthree dark:text-neutral-200">
                 Basic Package
               </a>
             </p>
             <p className="mb-4">
-              <a href="/professional" className="text-white hover:underline text-sm md:text-md lg:text-lg tracking-widest font-customnine dark:text-neutral-200">
+              <a href="/professional" className="text-white hover:underline text-sm md:text-md lg:text-lg tracking-widest font-customthree dark:text-neutral-200">
                 Professional Package
               </a>
             </p>
             <p className="mb-4">
-              <a href="/enterprise" className="text-white hover:underline text-sm md:text-md lg:text-lg tracking-widest font-customnine dark:text-neutral-200">
+              <a href="/enterprise" className="text-white hover:underline text-sm md:text-md lg:text-lg tracking-widest font-customthree dark:text-neutral-200">
                 Enterprise Package
               </a>
             </p>
@@ -109,7 +109,7 @@ const Footer = () => {
               Contact
             </h6>
            
-            <p className="mb-4 flex items-center hover:underline font-customnine text-sm md:text-md lg:text-lg justify-center md:justify-start">
+            <p className="mb-4 flex items-center hover:underline font-customthree tracking-widest text-sm md:text-md lg:text-lg justify-center md:justify-start">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="mr-3 h-5 w-5">
                 <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
                 <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
@@ -120,10 +120,10 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="bg-transparent p-6 text-center font-customnine dark:bg-slate-950">
+      <div className="bg-transparent p-6 text-center font-customtwo dark:bg-slate-950">
         <span>© 2024 Copyright:</span>
-        <a className="font-semibold text-neutral-600 text-md pl-2 dark:text-neutral-400 font-customnine" href="https://coreygmarsh.com/">
-          Corey G. Marsh
+        <a className="font-semibold text-neutral-600 text-md pl-1 dark:text-neutral-400 font-customtwo" href="https://cgmcreativesolutions.com/">
+          Cinematic Global Minds
         </a>
       </div>
     </footer>

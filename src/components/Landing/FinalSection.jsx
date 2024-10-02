@@ -35,7 +35,7 @@ const FinalSection = () => {
       </video>
       {/* <img src={CGMBizCard} className='h-60 w-60'/> */}
       <button onClick= {handleNavigate}
-      className="z-10 text-white md:mx-24 text-2xl xl:text-6xl lg:text-5xl md:text-5xl sm:text-3xl font-customnine tracking-wide border shadow-2xl shadow-white rounded-full p-8 hover:bg-cyan-900 vision">CONTACT ME </button>
+      className="z-10 text-white md:mx-24 text-2xl xl:text-6xl lg:text-5xl md:text-5xl sm:text-3xl font-customnine tracking-wide border shadow-2xl shadow-white rounded-full p-8 hover:bg-cyan-900 vision">CONTACT US</button>
       {/* Or if you want to include the Contact component instead of the text */}
       {/* <div className="z-10"><Contact /></div> */}
     </div>
