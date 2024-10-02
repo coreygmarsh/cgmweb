@@ -65,7 +65,7 @@ const Basic = () => {
           />
           <Navbar />
           <div className='pt-2 flex-col'>
-            <PackagesOverview selectedPackage="Basic" />
+            <PackagesOverview selectedPackage="Basic Package" />
           </div>
           <div className='border-b-2 border-teal-500'></div>
           <div className='pt-16'>

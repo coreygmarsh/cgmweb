@@ -4,37 +4,37 @@ import PackageInfoCards from './PackageInfoCards';  // Ensure the path matches w
 const PackagesOverview = ({ selectedPackage }) => {
   const packages = [
     {
-      name: "Basic",
-      cost: 900,
+      name: "Basic Package",
+      cost: 1500,
       features: [
-        "5 Revisions per project",
+        "3 Revisions per project",
         "1 simultaneous request",
         "(1) 15 min consultation",
-        "Up to 4 edits per month",
+        "Up to 4 projects",
         "Up to 4 minutes each",
       ],
       
     },
     {
-      name: "Professional",
-      cost: 1500,
+      name: "Professional Package",
+      cost: 3000,
       features: [
-        "10 Revisions per project",
+        "6 Revisions per project",
         "2 simultaneous requests",
         "(1) 30 mins consultation",
-        "Up to 8 edits per month",
+        "Up to 8 projects",
         "Up to 10 minutes each",
       ],
       
     },
     {
-      name: "Enterprise",
-      
+      name: "Enterprise Package",
+      cost: 4000,
       features: [
         "Unlimited Revisions",
         "3 simultaneous requests",
-        "(1)60 minute conference",
-        "Up to 15 edits per month",
+        "(1)60 minute consultation",
+        "Up to 8 projects",
         "Up to 20 minutes each",
       ],
       

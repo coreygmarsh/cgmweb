@@ -54,13 +54,13 @@ const CreativeSolutionsForm = () => {
     }
   };
 
-  const inputClasses = "w-full p-2 sm:p-3 md:p-4 border border-gray-300 rounded-md bg-black text-white text-sm sm:text-base md:text-lg";
+  const inputClasses = "w-full p-2 sm:p-3 md:p-4 border border-teal-500 shadow-sparkle rounded-md bg-white text-white text-sm sm:text-base md:text-lg";
   const labelClasses = "mb-1 sm:mb-2 text-sm sm:text-base md:text-lg text-white";
 
   return (
     <div className="max-w-4xl mx-auto p-4 sm:p-6 md:p-8 border border-teal-500 bg-black bg-opacity-30 rounded-lg shadow-sparkle">
       <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6 relative z-10">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-green-300 font-semibold text-center mb-4 sm:mb-6">Creative Assessment</h2>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-green-300 font-semibold font-customtwo text-center mb-4 sm:mb-6">Creative Assessment</h2>
 
         {[
           { name: 'name', label: 'Name', type: 'text' },

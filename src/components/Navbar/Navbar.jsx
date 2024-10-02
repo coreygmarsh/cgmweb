@@ -56,7 +56,7 @@ const Navbar = () => {
             </a>
           </div>
 
-          <nav className="flex flex-col font-customnine tracking-widest z-[70] pt-14 items-center p-12">
+          <nav className="flex flex-col font-customtwo tracking-widest z-[70] pt-14 items-center p-12">
             <Link
               to="/"
               className="py-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl hover:text-green-300 nav-link"
