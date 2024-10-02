@@ -34,8 +34,8 @@ export const SectionDeuce = () => {
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-slate-800 via-teal-700 to-cyan-800 opacity-95" />
 
       {/* Services Guide Section */}
-      <div className="relative z-50 flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <h2 className="text-4xl sm:text-5xl lg:text-6xl text-green-300 font-customtwo tracking-widest mb-8 sm:mb-12">
+      <div className="relative z-0 flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <h2 className="text-4xl sm:text-5xl lg:text-8xl text-green-300 font-customtwo tracking-widest mb-8 sm:mb-12">
           SERVICES
         </h2>
 
