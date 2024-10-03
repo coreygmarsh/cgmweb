@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { NavigatingNewSuccess, CorporateStorytelling, CausticLightning, OvercomingOversaturation } from '../../images/ImgAssets'; // Import only the relevant images
+import { NavigatingNewSuccess, CorporateStorytelling, CausticLightning, OvercomingOversaturation,EngagingContent } from '../../images/ImgAssets'; // Import only the relevant images
 import Navbar from '../../components/Navbar/Navbar';
 
 const Card = ({ children }) => (
@@ -70,7 +70,7 @@ const BlogMain = () => {
     },
     {
       title: "Creating Engaging Content with Video",
-      image: CausticLightning,
+      image: EngagingContent,
       category: "Content Creation",
       content: "Engaging content is key to capturing your audience's attention and driving action. In this article, we discuss the best practices for creating compelling video content that not only entertains but also converts..."
     },

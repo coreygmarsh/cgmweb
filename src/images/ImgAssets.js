@@ -61,14 +61,15 @@ import EventVideos from "../images/EventVideos.png"
 import ExplainerVideos from "../images/ExplainerVideos.png"
 import LibraryBackground from "../images/LibraryBackground.png"
 import NavigatingNewSuccess from "../images/NavigatingNewSuccess.webp"
-import CorporateStorytelling from "../images/CorporateStorytelling.webp"
-import OvercomingOversaturation from "../images/OvercomingOversaturation.webp"
+import CorporateStorytelling from "../images/CorporateStorytelling.png"
+import OvercomingOversaturation from "../images/OvercomingOversaturation.png"
 import CGMlogo from "../images/CGMlogo.png"
 import VideoG from "../images/VideoG.jpg"
 import GraphicG from "../images/GraphicG.jpg"
 import AudioG from "../images/AudioG.jpg"
 import ConsultationG from "../images/ConsultationG.jpg"
+import EngagingContent from "../images/EngagingContent.png"
 
 export {
-Underwater, FounderVideos, CGMlogo, VideoG,GraphicG, AudioG, ConsultationG, OvercomingOversaturation, CorporateStorytelling, NavigatingNewSuccess, LibraryBackground, ExplainerVideos, Animations, EventVideos, CausticLightning, Graphics, Testimonials, CausLightning, LyricVideos, ProductDemos, GreenLightning, AboutBanner, Rootstwo, Harmony, Roots, SunT, BlackSea,Pool, Very, waterVector,CGMBizCard, Caustics, TwoSub, Subway, WaterTwo, Outdoor, WaterPerson, Avatar, Earth, PhotoShop,ThreeJs, FinalCutPro, PortraitThree, PremierePro, MernStack, Blender, AfterEffects, MernStackTwo, WaveEyes, WaveDrawing, GuitarOne, TwentyFive, WaterRoad, PortraitOne, Eser, Swim, Palace, Waves, Video1, PortraitMainOne, CGMWEB4, WavesThree, About, Danita, LetMeLoose, Sub3, Botanical, UnderwaterRoad, Tension,watertexture, 
+Underwater, FounderVideos,EngagingContent, CGMlogo, VideoG,GraphicG, AudioG, ConsultationG, OvercomingOversaturation, CorporateStorytelling, NavigatingNewSuccess, LibraryBackground, ExplainerVideos, Animations, EventVideos, CausticLightning, Graphics, Testimonials, CausLightning, LyricVideos, ProductDemos, GreenLightning, AboutBanner, Rootstwo, Harmony, Roots, SunT, BlackSea,Pool, Very, waterVector,CGMBizCard, Caustics, TwoSub, Subway, WaterTwo, Outdoor, WaterPerson, Avatar, Earth, PhotoShop,ThreeJs, FinalCutPro, PortraitThree, PremierePro, MernStack, Blender, AfterEffects, MernStackTwo, WaveEyes, WaveDrawing, GuitarOne, TwentyFive, WaterRoad, PortraitOne, Eser, Swim, Palace, Waves, Video1, PortraitMainOne, CGMWEB4, WavesThree, About, Danita, LetMeLoose, Sub3, Botanical, UnderwaterRoad, Tension,watertexture, 
 }
