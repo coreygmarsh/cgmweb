@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { BlackSea, VideoG, GraphicG, AudioG, ConsultationG, watertexture } from "../../images/ImgAssets";
 
 export const SectionDeuce = () => {
@@ -40,11 +41,20 @@ export const SectionDeuce = () => {
         </h2>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+        <motion.div 
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.5 }}
+        >
           {services.map((service, index) => (
-            <div 
+            <motion.div 
               key={index}
-              className="bg-gradient-to-br to-teal-900 from-slate-950 p-4 sm:p-6 rounded-lg shadow-sparkle transform transition-all duration-300 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl hover:rotate-2 animate-fadeIn"
+              className="bg-gradient-to-br to-teal-900 from-slate-950 p-4 sm:p-6 rounded-lg shadow-sparkle transform transition-all duration-300 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl hover:rotate-2"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.2, duration: 0.8 }}
+              whileHover={{ scale: 1.05, rotate: 2, y: -10, transition: { duration: 0.3 } }} // Custom hover with motion
             >
               <img
                 src={service.image}
@@ -57,9 +67,9 @@ export const SectionDeuce = () => {
               <p className="text-xs sm:text-sm font-customnine text-white">
                 {service.description}
               </p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );
