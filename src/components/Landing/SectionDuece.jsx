@@ -17,9 +17,9 @@ export const SectionDeuce = () => {
         opacity: 1,
         x: 0,
         rotation: 0,
-        duration: 0.2,
+        duration: 0.4,
         ease: 'power3.out',
-        stagger: 0.1, // Cards animate one after the other
+        stagger: 0.2, // Cards animate one after the other
         scrollTrigger: {
           trigger: cardsRef.current[0],
           start: 'top 80%',
@@ -82,9 +82,7 @@ export const SectionDeuce = () => {
 
       {/* Services Guide Section */}
       <div className="relative z-0 flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        {/* <h2 className="text-4xl sm:text-5xl lg:text-8xl text-green-300 font-customtwo tracking-widest mb-8 sm:mb-12">
-          SERVICES
-        </h2> */}
+        
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">

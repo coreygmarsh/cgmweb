@@ -69,7 +69,10 @@ import GraphicG from "../images/GraphicG.jpg"
 import AudioG from "../images/AudioG.jpg"
 import ConsultationG from "../images/ConsultationG.jpg"
 import EngagingContent from "../images/EngagingContent.png"
-
+import BlossomingF from "../images/BlossomingF.png"
+import BirdSoaring from "../images/BirdSoaring.png"
+import SkyClouds from "../images/SkyClouds.png"
+import Wavey from "../images/Wavey.png"
 export {
-Underwater, FounderVideos,EngagingContent, CGMlogo, VideoG,GraphicG, AudioG, ConsultationG, OvercomingOversaturation, CorporateStorytelling, NavigatingNewSuccess, LibraryBackground, ExplainerVideos, Animations, EventVideos, CausticLightning, Graphics, Testimonials, CausLightning, LyricVideos, ProductDemos, GreenLightning, AboutBanner, Rootstwo, Harmony, Roots, SunT, BlackSea,Pool, Very, waterVector,CGMBizCard, Caustics, TwoSub, Subway, WaterTwo, Outdoor, WaterPerson, Avatar, Earth, PhotoShop,ThreeJs, FinalCutPro, PortraitThree, PremierePro, MernStack, Blender, AfterEffects, MernStackTwo, WaveEyes, WaveDrawing, GuitarOne, TwentyFive, WaterRoad, PortraitOne, Eser, Swim, Palace, Waves, Video1, PortraitMainOne, CGMWEB4, WavesThree, About, Danita, LetMeLoose, Sub3, Botanical, UnderwaterRoad, Tension,watertexture, 
+Underwater, FounderVideos,EngagingContent, BirdSoaring, BlossomingF, CGMlogo, VideoG,GraphicG, AudioG, ConsultationG, OvercomingOversaturation, CorporateStorytelling, NavigatingNewSuccess, LibraryBackground, ExplainerVideos, Animations, EventVideos, SkyClouds, Wavey, CausticLightning, Graphics, Testimonials, CausLightning, LyricVideos, ProductDemos, GreenLightning, AboutBanner, Rootstwo, Harmony, Roots, SunT, BlackSea,Pool, Very, waterVector,CGMBizCard, Caustics, TwoSub, Subway, WaterTwo, Outdoor, WaterPerson, Avatar, Earth, PhotoShop,ThreeJs, FinalCutPro, PortraitThree, PremierePro, MernStack, Blender, AfterEffects, MernStackTwo, WaveEyes, WaveDrawing, GuitarOne, TwentyFive, WaterRoad, PortraitOne, Eser, Swim, Palace, Waves, Video1, PortraitMainOne, CGMWEB4, WavesThree, About, Danita, LetMeLoose, Sub3, Botanical, UnderwaterRoad, Tension,watertexture, 
 }

@@ -9,6 +9,7 @@ import { HeroParallax } from "./HeroParallax"
 import { BlackSea, Earth, Eser, Outdoor, Palace, Pool, Subway, Swim, Tension, TwoSub, Underwater, UnderwaterRoad, Very, WaterPerson, WaterRoad, WaveEyes, Waves } from "../../images/ImgAssets"
 import { TracingBeam } from "../../ui/TracingBeam"
 import { CallToAction } from "./CallToAction"
+import HorizontalPanels from "./HorizontalPanels"
 
 
 const Landing = () => {
@@ -37,11 +38,14 @@ const Landing = () => {
         <div className="bg-gradient-to-b from-slate-800 via-teal-700 to-cyan-800">
           <SectionTwo />
         </div>
-        <div className="bg-gradient-to-b to-slate-800 via-teal-700  from-cyan-800">
+        <div className="bg-gradient-to-b to-slate-800 via-teal-700  from-cyan-800 pb-1">
           <FinalSection/>
         </div>
   
-        <div className="bg-gradient-to-b to-slate-800 via-teal-700 pb-2 md:pb-4  from-cyan-800">
+        <div className="bg-gradient-to-t to-slate-800 via-teal-700 pb-1 md:pb-1 from-cyan-800">
+        <HorizontalPanels />
+        </div>
+        <div className="bg-gradient-to-b to-slate-800 via-teal-700 pb-1 from-cyan-800">
         <CallToAction />
         </div>
       </TracingBeam>
