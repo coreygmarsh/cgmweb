@@ -16,7 +16,7 @@ const BlogCard = ({ title, image, category, content }) => {
       <Card>
         <img src={image} alt={title} className="w-full opacity-100 rounded-lg h-48 object-cover" />
         <div className="p-4">
-          <h3 className="font-bold text-center text-white text-lg mb-2">{title}</h3>
+          <h3 className="font-bold text-center font-customtwo text-white text-lg mb-2">{title}</h3>
           <p className="text-sm text-center  text-white mb-2">{category}</p>
           <p className="text-sm text-center text-white">
             {`${content.substring(0, 50)}...`}

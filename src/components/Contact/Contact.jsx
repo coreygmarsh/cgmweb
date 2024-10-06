@@ -55,7 +55,7 @@ const Contact = () => {
         <Navbar className=" " />
         <div className="relative z-[60]  flex flex-col items-center justify-center h-full">
           <div className="pb-16 w-[50vh] md:w-[70vh] p-8 bg-gradient-to-br from-cyan-800 bg-opacity-20 rounded-lg shadow-sparkle">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-green-300 text-center mb-4">Contact Us</h2>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold font-customtwo text-green-300 text-center mb-4">Contact Us</h2>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm pt-2 md:text-base font-medium text-white"></label>

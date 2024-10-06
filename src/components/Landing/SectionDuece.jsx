@@ -1,8 +1,54 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { BlackSea, VideoG, GraphicG, AudioG, ConsultationG, watertexture } from "../../images/ImgAssets";
 
+gsap.registerPlugin(ScrollTrigger);
+
 export const SectionDeuce = () => {
+  const cardsRef = useRef([]);
+
+  useEffect(() => {
+    // Advanced staggered animation with parallax
+    gsap.fromTo(
+      cardsRef.current,
+      { opacity: 0, x: (i) => (i % 2 === 0 ? -200 : 200), rotation: (i) => (i % 2 === 0 ? -10 : 10) }, // Cards from left: slide left & rotate, from right: slide right & rotate
+      {
+        opacity: 1,
+        x: 0,
+        rotation: 0,
+        duration: 0.2,
+        ease: 'power3.out',
+        stagger: 0.1, // Cards animate one after the other
+        scrollTrigger: {
+          trigger: cardsRef.current[0],
+          start: 'top 80%',
+          toggleActions: 'play none none reverse',
+        },
+      }
+    );
+
+    // Add parallax effect as user scrolls
+    cardsRef.current.forEach((card) => {
+      gsap.to(card, {
+        y: '-=50', // Parallax effect, cards slightly move as you scroll
+        scrollTrigger: {
+          trigger: card,
+          scrub: true,
+          start: 'top bottom',
+          end: 'bottom top',
+        },
+      });
+    });
+  }, []);
+
+  // Create ref array for all cards
+  const addToRefs = (el) => {
+    if (el && !cardsRef.current.includes(el)) {
+      cardsRef.current.push(el);
+    }
+  };
+
   const services = [
     {
       title: "🎬 Video Creation & Editing",
@@ -36,25 +82,17 @@ export const SectionDeuce = () => {
 
       {/* Services Guide Section */}
       <div className="relative z-0 flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <h2 className="text-4xl sm:text-5xl lg:text-8xl text-green-300 font-customtwo tracking-widest mb-8 sm:mb-12">
+        {/* <h2 className="text-4xl sm:text-5xl lg:text-8xl text-green-300 font-customtwo tracking-widest mb-8 sm:mb-12">
           SERVICES
-        </h2>
+        </h2> */}
 
         {/* Services Grid */}
-        <motion.div 
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.5 }}
-        >
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
           {services.map((service, index) => (
-            <motion.div 
+            <div
               key={index}
+              ref={addToRefs}
               className="bg-gradient-to-br to-teal-900 from-slate-950 p-4 sm:p-6 rounded-lg shadow-sparkle transform transition-all duration-300 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl hover:rotate-2"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.2, duration: 0.8 }}
-              whileHover={{ scale: 1.05, rotate: 2, y: -10, transition: { duration: 0.3 } }} // Custom hover with motion
             >
               <img
                 src={service.image}
@@ -67,9 +105,9 @@ export const SectionDeuce = () => {
               <p className="text-xs sm:text-sm font-customnine text-white">
                 {service.description}
               </p>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </div>
   );

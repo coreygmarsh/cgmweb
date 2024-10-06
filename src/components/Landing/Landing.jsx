@@ -14,12 +14,12 @@ import { CallToAction } from "./CallToAction"
 const Landing = () => {
   const mockProducts = [
     { title: "Product Demos", link: "/demo", thumbnail: Pool },
-    { title: "Lyric Videos", link: "/lyric", thumbnail:  Outdoor},
+    { title: "Short Form Ads", link: "/shortform", thumbnail:  Outdoor},
     { title: "Testimonial Videos", link: "/testimonial", thumbnail:  WaterPerson},
     { title: "Graphics", link: "/graphicdesign", thumbnail: TwoSub },
     { title: "Founder Videos", link: "/founder", thumbnail: Very },
-    { title: "Animation", link: "/motion", thumbnail: Swim },
-    { title: "Photo Shoots", link: "/photobook", thumbnail: UnderwaterRoad },
+    { title: "Training", link: "/training", thumbnail: Swim },
+    { title: "Soundtracks", link: "/soundtracks", thumbnail: UnderwaterRoad },
     { title: "Event Videos", link: "/event", thumbnail: BlackSea },
     { title: "Explainer Videos", link: "/explainer", thumbnail: Waves },
   ];
@@ -38,11 +38,11 @@ const Landing = () => {
           <SectionTwo />
         </div>
         <div className="bg-gradient-to-b to-slate-800 via-teal-700  from-cyan-800">
-          <CallToAction />
+          <FinalSection/>
         </div>
   
         <div className="bg-gradient-to-b to-slate-800 via-teal-700 pb-2 md:pb-4  from-cyan-800">
-          <FinalSection />
+        <CallToAction />
         </div>
       </TracingBeam>
       <Footer />

@@ -49,15 +49,15 @@ const App = () => {
 
           <Route path="/library" element={<LibraryThree />} />
           <Route path="/demo" element={<Section1 />} />
-          <Route path="/lyric" element={<Section2 />} />
+          <Route path="/shortform" element={<Section2 />} />
           <Route path="/testimonial" element={<Section3 />} />
           <Route path="/graphicdesign" element={<Section4 />} />
           <Route path="/founder" element={<Section5 />} />
-          <Route path="/motion" element={<Section6 />} />
+          <Route path="/training" element={<Section6 />} />
           <Route path="/photobook" element={<Section7 />} />
           <Route path="/event" element={<Section8 />} />
           <Route path="/explainer" element={<Section9/>} />
-          <Route path="/wedding" element={<Section10 />} />
+          <Route path="/soundtracks" element={<Section10 />} />
 
           <Route path="/services" element={<Services/>} />
             <Route path="/basic" element={<Basic/>} />
