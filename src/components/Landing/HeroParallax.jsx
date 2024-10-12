@@ -99,7 +99,7 @@ export const Header = () => {
       >
         <p className="leading-tight text-white">
           <span className="ml-1 text-white font-customtwo font-bold vision">CGM Creative Solutions</span>
-          <div className="pt-2 sm:pt-4 text-3xl sm:text-4xl md:text-5xl text-white">
+          <div className="pt-2 sm:pt-4 text-3xl sm:text-4xl md:text-5xl ml-1 text-white">
             Imagine <span className="italic font-bold text-green-300">BIGGER.</span>
           </div>
         </p>

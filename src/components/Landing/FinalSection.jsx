@@ -64,13 +64,13 @@ const FAQSection = () => {
         {faqData.map((faq, index) => (
           <div
             key={index}
-            className="bg-gradient-to-br to-teal-900 from-slate-950 p-6 rounded-lg shadow-lg"
+            className="bg-gradient-to-br to-teal-900 from-slate-950 shadow-sparkle p-6 rounded-lg"
             ref={addToRefs}
           >
-            <h3 className="text-2xl font-bold text-white mb-2">
+            <h3 className="text-xl font-bold text-green-300 mb-2">
               {faq.question}
             </h3>
-            <p className="text-white text-lg">
+            <p className="text-white text-md">
               {faq.answer}
             </p>
           </div>

@@ -10,6 +10,8 @@ import { BlackSea, Earth, Eser, Outdoor, Palace, Pool, Subway, Swim, Tension, Tw
 import { TracingBeam } from "../../ui/TracingBeam"
 import { CallToAction } from "./CallToAction"
 import HorizontalPanels from "./HorizontalPanels"
+import EndPageAnimation from "./EndPageAnimation"
+import { IntroVideo } from "./IntroVideo"
 
 
 const Landing = () => {
@@ -46,7 +48,13 @@ const Landing = () => {
         <HorizontalPanels />
         </div>
         <div className="bg-gradient-to-b to-slate-800 via-teal-700 pb-1 from-cyan-800">
+        <EndPageAnimation />
+        </div>
+        <div className="bg-gradient-to-t to-slate-800 via-teal-700 pb-1 from-cyan-800">
         <CallToAction />
+        </div>
+        <div className="bg-gradient-to-b to-slate-800 via-teal-700 pb-1 from-cyan-800">
+        <IntroVideo />
         </div>
       </TracingBeam>
       <Footer />

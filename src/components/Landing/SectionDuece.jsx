@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { BlackSea, VideoG, GraphicG, AudioG, ConsultationG, watertexture } from "../../images/ImgAssets";
+import { BlackSea, VideoG, GraphicG, AudioG, ConsultationG, watertexture, BirdSoaring } from "../../images/ImgAssets";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -75,7 +75,7 @@ export const SectionDeuce = () => {
   return (
     <div
       className="min-h-screen py-12 md:py-20 overflow-hidden bg-center bg-cover w-full relative flex flex-col"
-      style={{ backgroundImage: `url(${watertexture})` }}
+      style={{ backgroundImage: `url(${BlackSea})` }}
     >
       {/* Gradient overlay */}
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-slate-800 via-teal-700 to-cyan-800 opacity-95" />

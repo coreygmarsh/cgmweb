@@ -1,8 +1,83 @@
-import React from 'react';
-import { CGMlogo, watertexture } from '../../images/ImgAssets';
+import React, { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { BirdSoaring, BlackSea, BlossomingF, CGMlogo, watertexture } from '../../images/ImgAssets';
 import Navbar from '../Navbar/Navbar';
 
+gsap.registerPlugin(ScrollTrigger);
+
 const AboutPage = () => {
+  const logoRef = useRef(null);
+  const textRef = useRef(null);
+  const titleRef = useRef(null);
+  const statementRef = useRef(null);
+
+  useEffect(() => {
+    // Animate logo
+    gsap.fromTo(
+      logoRef.current,
+      { opacity: 0, scale: 0.5, rotation: -45 },
+      {
+        opacity: 1,
+        scale: 1,
+        rotation: 0,
+        duration: 1,
+        ease: "back.out(1.7)",
+        scrollTrigger: {
+          trigger: logoRef.current,
+          start: "top center",
+        }
+      }
+    );
+
+    // Animate the description text
+    gsap.fromTo(
+      textRef.current,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.2,
+        scrollTrigger: {
+          trigger: textRef.current,
+          start: "top 80%",
+        },
+      }
+    );
+
+    // Animate title
+    gsap.fromTo(
+      titleRef.current,
+      { opacity: 0, scale: 0.9 },
+      {
+        opacity: 1,
+        scale: 1,
+        duration: 1.5,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: titleRef.current,
+          start: "top 80%",
+        },
+      }
+    );
+
+    // Animate closing statement
+    gsap.fromTo(
+      statementRef.current,
+      { opacity: 0, y: 100 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.5,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: statementRef.current,
+          start: "top 90%",
+        },
+      }
+    );
+  }, []);
+
   return (
     <div className="relative min-h-screen font-customnine bg-gradient-to-t from-teal-600 to-slate-900">
       <Navbar />
@@ -14,9 +89,9 @@ const AboutPage = () => {
       <div className="relative w-full min-h-screen text-white">
         {/* Background Image */}
         <img 
-          src={watertexture} 
+          src={BlossomingF} 
           alt="Pattern background" 
-          className="fixed inset-0 mx-4 sm:mx-6 md:mx-12 lg:mx-24 xl:mx-24 h-screen w-auto object-cover mix-blend-overlay opacity-20 shadow-sparkle" 
+          className="fixed inset-0 mx-4 sm:mx-6 md:mx-12 lg:mx-24 xl:mx-24 h-screen w-full object-cover mix-blend-overlay opacity-60 shadow-sparkle" 
         />
         
         {/* Content Wrapper */}
@@ -29,13 +104,17 @@ const AboutPage = () => {
               {/* Logo Badge */}
               <img 
                 src={CGMlogo}
+                ref={logoRef}
                 alt="Logo Badge"
                 className="absolute top-0 right-0 -mt-12 -mr-12 h-24 w-24"
               />
               
               {/* Description Text */}
-              <p className="text-sm md:text-lg mb-4">
-                <span className="block text-center text-4xl font-customtwo underline text-green-300 mb-4">
+              <p ref={textRef} className="text-sm md:text-lg mb-4">
+                <span 
+                  ref={titleRef}
+                  className="block text-center text-4xl font-customtwo underline text-green-300 mb-4"
+                >
                   CGM Creative Solutions
                 </span>
                 At CGM Creative Solutions, we are passionate storytellers dedicated to bringing your vision to life through exceptional creative digital services. Founded by Corey Marsh, CGM combines over a decade of industry expertise with a commitment to innovation, helping businesses of all sizes captivate their audiences and elevate their brand presence.
@@ -55,7 +134,7 @@ const AboutPage = () => {
           </div>
           
           {/* Closing Statement */}
-          <div className='text-center pt-12 text-xl sm:text-4xl md:text-5xl lg:text-6xl'>
+          <div ref={statementRef} className='text-center pt-12 text-xl sm:text-4xl md:text-5xl lg:text-6xl'>
             Adding <span className='text-green-300 italic vision'>Energy</span> to every story...
           </div>
         </div>

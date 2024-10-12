@@ -1,13 +1,63 @@
-import React from 'react';
+import {useEffect, useRef,React} from 'react';
 import { BentoGrid } from './utils/BentoGrid';
 import Navbar from './Navbar/Navbar';
 import PricingTable from './PricingTable';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import pattern from "../images/svgs/pattern.svg";
 import { BlackSea, CausLightning, watertexture } from '../images/ImgAssets';
 
+gsap.registerPlugin(ScrollTrigger);
+
 const Services = () => {
+  const sectionRefs = useRef([]);
+  const pricingRef = useRef(null);
+
+  useEffect(() => {
+    // Scroll-triggered animation for each section
+    sectionRefs.current.forEach((section) => {
+      gsap.fromTo(
+        section,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1.2,
+          ease: 'power4.out',
+          scrollTrigger: {
+            trigger: section,
+            start: 'top 80%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    });
+
+    // Pricing table highlight animation on scroll
+    gsap.fromTo(
+      pricingRef.current,
+      { opacity: 0, scale: 0.9 },
+      {
+        opacity: 1,
+        scale: 1,
+        duration: 1.2,
+        ease: 'power4.out',
+        scrollTrigger: {
+          trigger: pricingRef.current,
+          start: 'top 75%',
+        },
+      }
+    );
+  }, []);
+
+  const addtoRefs = (el) => {
+    if (el && !sectionRefs.current.includes(el)) {
+      sectionRefs.current.push(el);
+    }
+  };
   return (
     <div className='bg-gradient-to-t h-[3000px] to-slate-800 via-teal-900 from-cyan-950'>
+      <Navbar />
       <div className="relative w-full h-[3000px] text-white">
         <img 
           src={BlackSea} 
@@ -19,7 +69,7 @@ const Services = () => {
         <div className='bg-gradient-to-b border-x border-teal-500 shadow-sparkle from-cyan-800 via-teal-700 to-slate-800 h-[3000px] mx-4 sm:mx-6 md:mx-12 lg:mx-24 xl:mx-24 font-customnine tracking-wide text-center pt-20 text-white text-4xl'>
           
           {/* Existing Packaged Pricing content */}
-          <div className="relative text-center py-10">
+          <div ref={addtoRefs} className="relative text-center py-10">
             <h2 className="text-6xl font-customtwo font-bold italic tracking-wider">Packaged Pricing</h2>
             <p className="mt-4 text-2xl font-customtwo text-green-300 italic">The CGM Process</p>
             
@@ -67,8 +117,8 @@ const Services = () => {
           </div>
 
           {/* Existing content */}
-          <div className='pt-16'>
-            <Navbar />
+          <div ref={pricingRef} className='pt-16'>
+            
             <div className="pt-16 pb-8">
               <PricingTable />
             </div>
@@ -79,7 +129,7 @@ const Services = () => {
           <div className='shadow-sparkle py-4 border-green-600'></div>
 
           {/* New Individual Pricings content added at the bottom */}
-          <div className="relative text-center py-20">
+          <div ref={addtoRefs} className="relative text-center py-20">
             <h2 className="text-6xl font-customtwo font-bold italic tracking-wider">Individual Pricings</h2>
             <p className="mt-4 text-2xl font-customtwo underline ">Video Services</p>
             

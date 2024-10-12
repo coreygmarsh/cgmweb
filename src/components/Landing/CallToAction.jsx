@@ -52,7 +52,7 @@ export const CallToAction = () => {
 
       <div className="relative z-0 text-center px-4 border-2 py-8 border-teal-500 rounded-md bg-black bg-opacity-40 shadow-sparkle sm:px-6 lg:px-8 max-w-5xl mx-auto">
         <h1 className="cta-heading text-4xl sm:text-5xl lg:text-7xl text-white font-customtwo tracking-widest mb-6">
-          Ready to <span className="animate-glow text-green-300">Elevate</span> Your Brand?
+          Ready to <span className="animate-glow text-green-300 ">Elevate</span> Your Brand?
         </h1>
         <p className="cta-paragraph text-lg sm:text-xl font-customnine text-white mb-12 max-w-2xl mx-auto">
           Whether you're looking for video creation, motion design, or creative consulting, our team is here to help you create content that stands out and tells your story. Let's work together to make your vision a reality.
