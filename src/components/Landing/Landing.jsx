@@ -28,7 +28,7 @@ const Landing = () => {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-b from-cyan-800 to-slate-800">
+    <div className="flex flex-col min-h-[100vh] bg-gradient-to-b from-cyan-800 to-slate-800">
       <div className="w-full z-20">
         <Navbar />
       </div>

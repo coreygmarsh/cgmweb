@@ -56,17 +56,17 @@ const Services = () => {
     }
   };
   return (
-    <div className='bg-gradient-to-t h-[3000px] to-slate-800 via-teal-900 from-cyan-950'>
+    <div className='bg-gradient-to-t md:h-[4000px] lg:h-[3000px] to-slate-800 via-teal-900 from-cyan-950'>
       <Navbar />
-      <div className="relative w-full h-[3000px] text-white">
+      <div className="relative w-full md:h-[4000px] lg:h-[3000px] text-white">
         <img 
           src={BlackSea} 
           alt="Pattern background" 
-          className="fixed inset-0 px-4 sm:px-6 md:px-12 lg:px-24 xl:px-24 h-[3000px] w-auto object-cover mix-blend-overlay opacity-80 shadow-sparkle" 
+          className="fixed inset-0 px-4 sm:px-6 md:px-12 lg:px-24 xl:px-24 md:h-[4000px] lg:h-[3000px] w-auto object-cover mix-blend-overlay opacity-80 shadow-sparkle" 
         />
 
         {/* Main container within shadow sparkle border */}
-        <div className='bg-gradient-to-b border-x border-teal-500 shadow-sparkle from-cyan-800 via-teal-700 to-slate-800 h-[3000px] mx-4 sm:mx-6 md:mx-12 lg:mx-24 xl:mx-24 font-customnine tracking-wide text-center pt-20 text-white text-4xl'>
+        <div className='bg-gradient-to-b border-x border-teal-500 shadow-sparkle from-cyan-800 via-teal-700 to-slate-800 md:h-[4000px] lg:h-[3000px] mx-4 sm:mx-6 md:mx-12 lg:mx-24 xl:mx-24 font-customnine tracking-wide text-center pt-20 text-white text-4xl'>
           
           {/* Existing Packaged Pricing content */}
           <div ref={addtoRefs} className="relative text-center py-10">
@@ -137,7 +137,7 @@ const Services = () => {
             <div className="mt-10 grid grid-cols-3 gap-6 mx-auto w-[90%] max-w-6xl text-lg">
               {/* Product Demos & Founders Video */}
               <div className="rounded-lg p-6 text-sm text-left text-white bg-gradient-to-br to-transparent from-slate-800">
-                <h3 className="text-xl font-customtwo font-bold mb-8 text-center ">Product/Founders</h3>
+                <h3 className="text-xl font-customtwo font-bold mb-8 text-center ">Product & Founder</h3>
                 <p className='pb-4'>Stream (1 min max, 1 revision) <span className="float-right text-green-300">$300</span></p>
                 <p className='py-4'>River (3 min max, 2 revisions) <span className="float-right text-green-300">$500</span></p>
                 <p className='py-4'>Ocean (5 min max, 3 revisions) <span className="float-right text-green-300">$800</span></p>
@@ -185,9 +185,9 @@ const Services = () => {
             </div>
             <p className="my-14 text-2xl font-customtwo underline ">Other Services</p>
             <div className="mt-10 grid grid-cols-3 gap-6 mx-auto w-[90%] max-w-6xl text-lg">
-              {/* Branding & Logos */}
+              {/* Branding */}
               <div className="rounded-lg p-6 text-sm text-left text-white bg-gradient-to-br to-transparent from-teal-950">
-                <h3 className="text-xl font-customtwo font-bold mb-8 text-center ">Branding/Logos</h3>
+                <h3 className="text-xl font-customtwo font-bold mb-8 text-center ">Branding</h3>
                 <p className='pb-4'>Level 1 (3 concepts, 1 revision) <span className="float-right text-green-300">$300</span></p>
                 <p className='py-4'>Level 2 (5 concepts, 2 revisions) <span className="float-right text-green-300">$500</span></p>
                 <p className='py-4'>Level 3 (10 concepts, 3 revisions) <span className="float-right text-green-300">$800</span></p>

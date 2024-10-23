@@ -100,13 +100,13 @@ const BlogSection = ({ title, description, items }) => {
 const BlogMain = () => {
   const BlogItems = [
     {
-      title: "The New Success Algorithm",
+      title: "Navigating New Success",
       image: NavigatingNewSuccess,
       category: "Technology",
       content: `Our world has undergone a dramatic shift. Not long ago, we were focused on pushing ourselves to the limit—working tirelessly, sacrificing sleep, and training our minds to numb out the endless "must-dos." But now, our era has flipped...`,
     },
     {
-      title: "Art of Corporate Storytelling",
+      title: "Corporate Storytelling",
       image: CorporateStorytelling,
       category: "Video Editing",
       content: `In the realm of corporate video advertisements and engagements, many companies overlook a crucial element: the art of storytelling. The truth is, while the concept seems straightforward, its application is far more nuanced...`,

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import '../../index.css'; // Ensure you have proper CSS styles in this file
+import '../../index.css';
 import { BirdSoaring, BlackSea, BlossomingF, SkyClouds, Wavey } from '../../images/ImgAssets';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -41,47 +41,33 @@ const HorizontalPanels = () => {
   ];
 
   return (
-    <div className='mx-4 sm:mx-6 md:mx-12 lg:mx-24 xl:mx-24 shadow-sparkle bg-gradient-to-t to-slate-950 from-transparent'>
+    <div className="mx-4 sm:mx-6 md:mx-12 lg:mx-24 xl:mx-24 shadow-sparkle bg-gradient-to-t to-slate-950 from-transparent">
       <div className="horizontal-panels-container flex w-full h-screen overflow-hidden">
         {sections.map((section, index) => (
           <div
             key={index}
             ref={addToRefs}
-            className="panel mx-2 shadow-sparkle relative " // Relative position to add overlay
+            className="panel mx-2 shadow-sparkle relative w-1/4 flex flex-col justify-center items-center p-4 cursor-pointer transition-transform duration-300 hover:scale-105"
             style={{
-              width: '25%',
               backgroundImage: `url(${section.image})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center',
-              padding: '1rem',
-              position: 'relative',
-              color: '#fff',
-              cursor: 'pointer',
-              transition: 'transform 0.3s ease',
             }}
           >
-            {/* Overlay to make text more visible */}
-            <div
-              style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-                backgroundColor: 'rgba(0, 0, 0, 0.2)', // Adjust transparency here
-                zIndex: 1, // Ensure the overlay is behind the text
-              }}
-            ></div>
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black bg-opacity-20 z-10"></div>
 
             {/* Content */}
-            <div style={{ position: 'relative', zIndex: 2 }}>
-              <h1 className='font-customtwo' style={{ fontSize: '3rem', fontWeight: 'bold' }}>{section.title}</h1>
-              <p className='font-customnine tracking-widest' style={{ fontSize: '1.2rem', marginTop: '1rem', textAlign: 'center', maxWidth: '80%' }}>{section.subtitle}</p>
-              <div className='font-customtwo text-teal-300' style={{ fontSize: '12rem', fontWeight: '100', opacity: 0.4, position: 'absolute', bottom: '10%', right: '10%' }}>
+            <div className="relative z-20 text-center">
+              <h1 className="font-customtwo font-bold text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
+                {section.title}
+              </h1>
+              
+              <p className="font-customnine tracking-widest text-white mt-4 mx-auto max-w-[80%] text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">
+                {section.subtitle}
+              </p>
+              
+              <div className="font-customtwo text-teal-300 opacity-40 absolute -bottom-8 right-0 text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-9xl">
                 {section.number}
               </div>
             </div>

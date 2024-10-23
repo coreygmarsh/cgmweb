@@ -59,7 +59,7 @@ export const CallToAction = () => {
         </p>
         
         <a
-          href="#contact"
+          href="/contact"
           className="cta-button inline-block px-8 py-4 text-lg sm:text-xl font-bold font-customtwo text-white rounded-lg bg-gradient-to-r from-teal-700 to-cyan-700 hover:from-teal-600 hover:to-cyan-600 shadow-sparkle transform transition-transform duration-300"
         >
           Get In Touch

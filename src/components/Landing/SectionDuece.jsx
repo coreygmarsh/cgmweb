@@ -17,9 +17,9 @@ export const SectionDeuce = () => {
         opacity: 1,
         x: 0,
         rotation: 0,
-        duration: 0.4,
+        duration: 0.2,
         ease: 'power3.out',
-        stagger: 0.2, // Cards animate one after the other
+        stagger: 0.1, // Cards animate one after the other
         scrollTrigger: {
           trigger: cardsRef.current[0],
           start: 'top 80%',
@@ -85,7 +85,7 @@ export const SectionDeuce = () => {
         
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full pt-0 sm:pt-8 md:pt-14 lg:pt-18 xl:pt-24">
           {services.map((service, index) => (
             <div
               key={index}

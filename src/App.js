@@ -29,8 +29,8 @@ import Cancel from './wip/Cancel';
 import Librarytwo from './wip/Librarytwo/Librarytwo';
 import LibraryThree from './wip/Librarythree';
 import BlogMain from './wip/Blog/BlogMain';
-import NavigatingNewSuccessBlog from './wip/Blog/Blogs/NavigatingNewSuccessBlog';
-import CorporateStorytellingBlog from './wip/Blog/Blogs/CorporateStorytellingBlog';
+import NavigatingNewSuccess from './wip/Blog/Blogs/NavigatingNewSuccess';
+import CorporateStorytelling from './wip/Blog/Blogs/CorporateStorytelling';
 import OvercomingOverSaturation from './wip/Blog/Blogs/OvercomingOverSaturation'
 const App = () => {
   return (
@@ -41,8 +41,8 @@ const App = () => {
           <Route path="/about" element={<AboutPage/>} />
 
         <Route path="/blog" element={<BlogMain/>} />
-          <Route path="/library/blog/navigating-the-new-success-algorithm" element={<NavigatingNewSuccessBlog />} />
-          <Route path="/library/blog/-art-of-corporate-video-storytelling" element={<CorporateStorytellingBlog />} />
+          <Route path="/library/blog/navigating-new-success" element={<NavigatingNewSuccess />} />
+          <Route path="/library/blog/corporate-storytelling" element={<CorporateStorytelling />} />
           <Route path="/library/blog/overcoming-oversaturation" element={<OvercomingOverSaturation />} />
           {/* <Route path="/library/blog/creating-engaging-content-with-video" element={<CreatingEngagingContentBlog />} /> */}
 
